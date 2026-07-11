@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="smoothCornerLayout" format="reference" />
+    <declare-styleable name="SmoothCornerLayout">
+        <attr name="android:radius" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SmoothCornerDrawable">
+        <attr name="android:radius" />
+        <attr name="android:color" />
+    </declare-styleable>
+
+    <attr name="cornerSmall" format="dimension" />
+</resources>
