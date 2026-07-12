@@ -120,6 +120,8 @@
         <item name="textAppearanceLabelMedium">@style/TextAppearance.Nature.LabelMedium</item>
         <item name="textAppearanceLabelSmall">@style/TextAppearance.Nature.LabelSmall</item>
 
+        <!-- Dialog -->
+        <item name="alertDialogTheme">@style/Theme.Nature.Dialog.DayNight</item>
         <!-- View -->
         <item name="button">@style/Widget.Nature.Button</item>
         <item name="smoothCornerLayout">@style/Widget.Nature.SmoothCornerLayout</item>

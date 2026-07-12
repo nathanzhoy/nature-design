@@ -40,6 +40,15 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name="com.nathan.widget.app.DialogActivity"
+            android:exported="false"
+            android:label="@string/dialog">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>

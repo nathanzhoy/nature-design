@@ -18,14 +18,12 @@ class PressAnimUtils(
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     scaleView(scaleRatio)
-                    true
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     scaleView(1.0f)
-                    true
                 }
-                else -> false
             }
+            false
         }
     }
 
