@@ -1,83 +1,103 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.Nathan" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- 1. 强调色 (Accent Colors) -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+        <!-- Primary -->
+        <item name="colorPrimary">@color/na_primary</item>
+        <item name="colorPrimaryContainer">@color/na_primary_container</item>
+        <item name="colorOnPrimary">@color/na_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/na_on_primary_container</item>
 
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer</item>
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/na_secondary</item>
+        <item name="colorSecondaryContainer">@color/na_secondary_container</item>
+        <item name="colorOnSecondary">@color/na_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/na_on_secondary_container</item>
 
-        <item name="colorTertiary">@color/colorTertiary</item>
-        <item name="colorOnTertiary">@color/colorOnTertiary</item>
-        <item name="colorTertiaryContainer">@color/colorTertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer</item>
+        <!-- Tertiary -->
+        <item name="colorTertiary">@color/na_tertiary</item>
+        <item name="colorTertiaryContainer">@color/na_tertiary_container</item>
+        <item name="colorOnTertiary">@color/na_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/na_on_tertiary_container</item>
 
-        <!-- 2. 表面与背景色 (Surface & Background) -->
-        <item name="android:background">@color/colorBackground</item>
-        <item name="colorOnBackground">@color/colorOnBackground</item>
-        <item name="colorSurface">@color/colorSurface</item>
-        <item name="colorOnSurface">@color/colorOnSurface</item>
-        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
-        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
+        <!-- Error -->
+        <item name="colorError">@color/na_error</item>
+        <item name="colorErrorContainer">@color/na_error_container</item>
+        <item name="colorOnError">@color/na_on_error</item>
+        <item name="colorOnErrorContainer">@color/na_on_error_container</item>
 
-        <!-- 3. 错误色 (Error Colors) -->
-        <item name="colorError">@color/colorError</item>
-        <item name="colorOnError">@color/colorOnError</item>
-        <item name="colorErrorContainer">@color/colorErrorContainer</item>
-        <item name="colorOnErrorContainer">@color/colorOnErrorContainer</item>
+        <!-- Fixed -->
+        <item name="colorPrimaryFixed">@color/na_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/na_primary_fixed_dim</item>
+        <item name="colorSecondaryFixed">@color/na_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/na_secondary_fixed_dim</item>
+        <item name="colorTertiaryFixed">@color/na_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/na_tertiary_fixed_dim</item>
 
-        <!-- 4. 轮廓色 (Outline Colors) -->
-        <item name="colorOutline">@color/colorOutline</item>
-        <item name="colorOutlineVariant">@color/colorOutlineVariant</item>
-    </style>
+        <!-- On Fixed -->
+        <item name="colorOnPrimaryFixed">@color/na_on_primary_fixed</item>
+        <item name="colorOnSecondaryFixed">@color/na_on_secondary_fixed</item>
+        <item name="colorOnTertiaryFixed">@color/na_on_tertiary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/na_on_primary_fixed_variant</item>
+        <item name="colorOnSecondaryFixedVariant">@color/na_on_secondary_fixed_variant</item>
+        <item name="colorOnTertiaryFixedVariant">@color/na_on_tertiary_fixed_variant</item>
 
-    <!--夜间模式颜色Token-->
-    <style name="Base.Theme.Nathan.Dark" parent="Base.Theme.Nathan">
-        <!-- 1. 强调色 (Accent Colors) -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+        <!-- Surface -->
+        <item name="colorSurfaceDim">@color/na_surface_dim</item>
+        <item name="colorSurface">@color/na_surface</item>
+        <item name="colorSurfaceBright">@color/na_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/na_surface_container</item>
+        <item name="colorSurfaceContainerLow">@color/na_surface_container_low</item>
+        <item name="colorSurfaceContainerHigh">@color/na_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/na_surface_container_highest</item>
 
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer</item>
+        <!-- Inverse -->
+        <item name="colorInverseSurface">@color/na_inverse_surface</item>
+        <item name="colorInverseOnSurface">@color/na_inverse_on_surface</item>
+        <item name="colorInversePrimary">@color/na_inverse_primary</item>
 
-        <item name="colorTertiary">@color/colorTertiary</item>
-        <item name="colorOnTertiary">@color/colorOnTertiary</item>
-        <item name="colorTertiaryContainer">@color/colorTertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer</item>
+        <!-- On Surface -->
+        <item name="colorOnSurface">@color/na_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/na_on_surface_variant</item>
 
-        <!-- 2. 表面与背景色 (Surface & Background) -->
-        <item name="android:background">@color/colorBackground</item>
-        <item name="colorOnBackground">@color/colorOnBackground</item>
-        <item name="colorSurface">@color/colorSurface</item>
-        <item name="colorOnSurface">@color/colorOnSurface</item>
-        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
-        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
+        <!-- Outline -->
+        <item name="colorOutline">@color/na_outline</item>
+        <item name="colorOutlineVariant">@color/na_outline_variant</item>
 
-        <!-- 3. 错误色 (Error Colors) -->
-        <item name="colorError">@color/colorError</item>
-        <item name="colorOnError">@color/colorOnError</item>
-        <item name="colorErrorContainer">@color/colorErrorContainer</item>
-        <item name="colorOnErrorContainer">@color/colorOnErrorContainer</item>
+        <!-- Misc -->
+        <item name="colorScrim">@color/na_scrim</item>
+        <item name="colorShadow">@color/na_shadow</item>
 
-        <!-- 4. 轮廓色 (Outline Colors) -->
-        <item name="colorOutline">@color/colorOutline</item>
-        <item name="colorOutlineVariant">@color/colorOutlineVariant</item>
+        <!-- Lowest / Highest -->
+        <item name="colorLowest">@color/na_lowest</item>
+        <item name="colorHighest">@color/na_highest</item>
+
+        <!-- Colorful -->
+        <item name="colorPrimaryRed">@color/na_primary_red</item>
+        <item name="colorOnPrimaryRed">@color/na_on_primary_red</item>
+        <item name="colorPrimaryContainerRed">@color/na_primary_container_red</item>
+        <item name="colorOnPrimaryContainerRed">@color/na_on_primary_container_red</item>
+        <item name="colorPrimaryGreen">@color/na_primary_green</item>
+        <item name="colorOnPrimaryGreen">@color/na_on_primary_green</item>
+        <item name="colorPrimaryContainerGreen">@color/na_primary_container_green</item>
+        <item name="colorOnPrimaryContainerGreen">@color/na_on_primary_container_green</item>
+        <item name="colorPrimaryYellow">@color/na_primary_yellow</item>
+        <item name="colorOnPrimaryYellow">@color/na_on_primary_yellow</item>
+        <item name="colorPrimaryContainerYellow">@color/na_primary_container_yellow</item>
+        <item name="colorOnPrimaryContainerYellow">@color/na_on_primary_container_yellow</item>
+        <item name="colorPrimaryOrange">@color/na_primary_orange</item>
+        <item name="colorOnPrimaryOrange">@color/na_on_primary_orange</item>
+        <item name="colorPrimaryContainerOrange">@color/na_primary_container_orange</item>
+
+        <!-- Corners Size -->
+        <item name="cornerMini">@dimen/na_corner_mini</item>
+        <item name="cornerSmall">@dimen/na_corner_small</item>
+        <item name="cornerMedium">@dimen/na_corner_medium</item>
+        <item name="cornerLarge">@dimen/na_corner_large</item>
+        <item name="cornerSpecific">@dimen/na_corner_specific</item>
+
+        <!-- View Attrs -->
+        <item name="smoothCornerLayout">@style/Widget.Nathan.SmoothCornerLayout</item>
     </style>
 
     <style name="Theme.Nathan.DayNight" parent="Base.Theme.Nathan">
-<!--
-        <item name="colorPrimary">#1368FB</item>
--->
-        <item name="cornerSmall">10dp</item>
-        <item name="smoothCornerLayout">@style/Widget.Nathan.SmoothCornerLayout</item>
     </style>
 </resources>

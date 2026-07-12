@@ -33,7 +33,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:text="平滑圆角"
-        android:textColor="@color/white"
+        android:textColor="?colorOnPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,7 +59,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:color="?colorSurfaceVariant"
-        android:radius="20dp"
+        android:radius="?cornerMedium"
         app:layout_constraintEnd_toEndOf="@id/tv"
         app:layout_constraintStart_toStartOf="@id/tv"
         app:layout_constraintTop_toBottomOf="@id/tv">
@@ -86,7 +86,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        android:radius="10dp"
+        android:radius="?cornerMini"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_container">

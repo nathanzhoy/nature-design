@@ -1,40 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- ============================================ -->
-    <!-- 日间模式颜色 (Light Theme)                    -->
-    <!-- ============================================ -->
+    <!-- Primary -->
+    <color name="na_primary">#1368FB</color>
+    <color name="na_primary_container">#261368FB</color>
+    <color name="na_on_primary">#FFFFFF</color>
+    <color name="na_on_primary_container">#1368FB</color>
 
-    <!-- 1. 强调色 (Accent Colors) -->
-    <color name="colorPrimary">#1368FB</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorPrimaryContainer">#261368FB</color>
-    <color name="colorOnPrimaryContainer">#1368FB</color>
+    <!-- Secondary -->
+    <color name="na_secondary">#625B71</color>
+    <color name="na_secondary_container">#E8DEF8</color>
+    <color name="na_on_secondary">#FFFFFF</color>
+    <color name="na_on_secondary_container">#1D192B</color>
 
-    <color name="colorSecondary">#625B71</color>
-    <color name="colorOnSecondary">#FFFFFF</color>
-    <color name="colorSecondaryContainer">#E8DEF8</color>
-    <color name="colorOnSecondaryContainer">#1D192B</color>
+    <!-- Tertiary -->
+    <color name="na_tertiary">#7D5260</color>
+    <color name="na_tertiary_container">#FFD8E4</color>
+    <color name="na_on_tertiary">#FFFFFF</color>
+    <color name="na_on_tertiary_container">#31111D</color>
 
-    <color name="colorTertiary">#7D5260</color>
-    <color name="colorOnTertiary">#FFFFFF</color>
-    <color name="colorTertiaryContainer">#FFD8E4</color>
-    <color name="colorOnTertiaryContainer">#31111D</color>
+    <!-- Error -->
+    <color name="na_error">#BA1A1A</color>
+    <color name="na_error_container">#FFDAD6</color>
+    <color name="na_on_error">#FFFFFF</color>
+    <color name="na_on_error_container">#410002</color>
 
-    <!-- 2. 表面与背景色 (Surface & Background) -->
-    <color name="colorBackground">#DAE2EB</color>
-    <color name="colorOnBackground">#000000</color>
-    <color name="colorSurface">#DAE2EB</color>
-    <color name="colorOnSurface">#000000</color>
-    <color name="colorSurfaceVariant">#CCD5E0</color>
-    <color name="colorOnSurfaceVariant">#80000000</color>
+    <!-- Fixed -->
+    <color name="na_primary_fixed">#EADDFF</color>
+    <color name="na_primary_fixed_dim">#D0BCFF</color>
+    <color name="na_secondary_fixed">#E8DEF8</color>
+    <color name="na_secondary_fixed_dim">#CCC2DC</color>
+    <color name="na_tertiary_fixed">#FFD8E4</color>
+    <color name="na_tertiary_fixed_dim">#EFB8C8</color>
 
-    <!-- 3. 错误色 (Error Colors) -->
-    <color name="colorError">#D21E30</color>
-    <color name="colorOnError">#FFFFFF</color>
-    <color name="colorErrorContainer">#26D21E30</color>
-    <color name="colorOnErrorContainer">#D21E30</color>
+    <!-- On Fixed -->
+    <color name="na_on_primary_fixed">#21005D</color>
+    <color name="na_on_secondary_fixed">#1D192B</color>
+    <color name="na_on_tertiary_fixed">#31111D</color>
+    <color name="na_on_primary_fixed_variant">#381E72</color>
+    <color name="na_on_secondary_fixed_variant">#4A4458</color>
+    <color name="na_on_tertiary_fixed_variant">#633B48</color>
 
-    <!-- 4. 轮廓色 (Outline Colors) -->
-    <color name="colorOutline">#14000000</color>
-    <color name="colorOutlineVariant">#2E000000</color>
+    <!-- Surface -->
+    <color name="na_surface_dim">#FFFFFF</color>
+    <color name="na_surface">#DAE2EB</color>
+    <color name="na_surface_bright">#CCD5E0</color>
+    <color name="na_surface_container">#ECF2F7</color>
+    <color name="na_surface_container_low">#E6F6FBFF</color>
+    <color name="na_surface_container_high">#4D808A96</color>
+    <color name="na_surface_container_highest">#99808A96</color>
+
+    <!-- Inverse -->
+    <color name="na_inverse_surface">#322F35</color>
+    <color name="na_inverse_on_surface">#F5EFF7</color>
+    <color name="na_inverse_primary">#D0BCFF</color>
+
+    <!-- On Surface -->
+    <color name="na_on_surface">#000000</color>
+    <color name="na_on_surface_variant">#80000000</color>
+
+    <!-- Outline -->
+    <color name="na_outline">#79747E</color>
+    <color name="na_outline_variant">#CAC4D0</color>
+
+    <!-- Misc -->
+    <color name="na_scrim">#000000</color>
+    <color name="na_shadow">#000000</color>
+
+    <!-- Lowest / Highest -->
+    <color name="na_lowest">#FFFFFF</color>
+    <color name="na_highest">#E6E0E9</color>
+
+    <!-- Colorful -->
+    <color name="na_primary_red">#D21E30</color>
+    <color name="na_on_primary_red">#FFFFFF</color>
+    <color name="na_primary_container_red">#26D21E30</color>
+    <color name="na_on_primary_container_red">#D21E30</color>
+    <color name="na_primary_green">#289F53</color>
+    <color name="na_on_primary_green">#FFFFFF</color>
+    <color name="na_primary_container_green">#26198440</color>
+    <color name="na_on_primary_container_green">#198440</color>
+    <color name="na_primary_yellow">#FB9700</color>
+    <color name="na_on_primary_yellow">#FFFFFF</color>
+    <color name="na_primary_container_yellow">#26FF9B00</color>
+    <color name="na_on_primary_container_yellow">#EC8F00</color>
+    <color name="na_primary_orange">#FA5700</color>
+    <color name="na_on_primary_orange">#FFFFFF</color>
+    <color name="na_primary_container_orange">#26FA5700</color>
+    <color name="na_on_primary_container_orange">#FA5700</color>
 </resources>

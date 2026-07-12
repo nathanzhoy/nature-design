@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 平滑圆角布局样式 -->
     <style name="Widget.Nathan.SmoothCornerLayout" parent="">
         <item name="android:radius">18dp</item>
     </style>

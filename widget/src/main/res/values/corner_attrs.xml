@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cornerMini" format="dimension|reference" />
+    <attr name="cornerSmall" format="dimension|reference" />
+    <attr name="cornerMedium" format="dimension|reference" />
+    <attr name="cornerLarge" format="dimension|reference" />
+    <attr name="cornerSpecific" format="dimension|reference" />
+</resources>
