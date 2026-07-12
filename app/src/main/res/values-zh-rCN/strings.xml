@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">自然组件库</string>
+    <string name="button">按钮</string>
+    <string name="smooth_layout">平滑布局</string>
+</resources>

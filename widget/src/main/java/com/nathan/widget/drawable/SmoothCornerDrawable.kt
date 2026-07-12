@@ -1,4 +1,4 @@
-package com.nathan.widget
+package com.nathan.widget.drawable
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
@@ -10,6 +10,8 @@ import android.graphics.Path
 import android.graphics.PixelFormat
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import com.nathan.widget.R
+import com.nathan.widget.util.BezierPathUtils
 import org.xmlpull.v1.XmlPullParser
 
 @SuppressLint("PrivateApi")

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nathan.widget.SmoothCornerDrawable xmlns:android="http://schemas.android.com/apk/res/android"
+<com.nathan.widget.drawable.SmoothCornerDrawable xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="#991368FB"
     android:radius="?cornerSmall" />

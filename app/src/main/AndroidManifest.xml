@@ -20,6 +20,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.nathan.widget.app.NatureButtonActivity"
+            android:exported="false"
+            android:label="@string/button">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nathan.widget.app.SmoothLayoutActivity"
+            android:exported="false"
+            android:label="@string/smooth_layout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

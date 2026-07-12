@@ -1,4 +1,4 @@
-package com.nathan.widget
+package com.nathan.widget.ui
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,6 +9,8 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import androidx.core.graphics.withClip
+import com.nathan.widget.util.BezierPathUtils
+import com.nathan.widget.R
 
 class SmoothCornerLayout @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -30,7 +32,7 @@ class SmoothCornerLayout @JvmOverloads constructor(
             attrs,
             R.styleable.SmoothCornerLayout,
             R.attr.smoothCornerLayout,
-            R.style.Widget_Nathan_SmoothCornerLayout
+            R.style.Widget_Nature_SmoothCornerLayout
         ) {
             radius = getDimension(R.styleable.SmoothCornerLayout_android_radius, 20F)
             color = getColor(R.styleable.SmoothCornerLayout_android_color, 0)

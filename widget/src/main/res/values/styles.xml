@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 平滑圆角布局样式 -->
-    <style name="Widget.Nathan.SmoothCornerLayout" parent="">
-        <item name="android:radius">18dp</item>
+    <style name="Widget.Nature.SmoothCornerLayout" parent="">
+        <item name="android:radius">?cornerSmall</item>
+    </style>
+
+    <!-- 普通按钮, 只支持简单的文本显示 -->
+    <style name="Widget.Nature.Button" parent="Widget.MaterialComponents.Button" >
+        <item name="elevation">0dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="shapeAppearance">@null</item>
+        <item name="android:textAppearance">?textAppearanceLabelSmall</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:background">@drawable/na_bg_btn_simple</item>
+        <item name="rippleColor">@null</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:minHeight">32dp</item>
     </style>
 </resources>

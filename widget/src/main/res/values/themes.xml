@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.Nathan" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Nature" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary -->
         <item name="colorPrimary">@color/na_primary</item>
         <item name="colorPrimaryContainer">@color/na_primary_container</item>
@@ -87,17 +87,44 @@
         <item name="colorOnPrimaryOrange">@color/na_on_primary_orange</item>
         <item name="colorPrimaryContainerOrange">@color/na_primary_container_orange</item>
 
-        <!-- Corners Size -->
+        <!-- Corner -->
         <item name="cornerMini">@dimen/na_corner_mini</item>
         <item name="cornerSmall">@dimen/na_corner_small</item>
         <item name="cornerMedium">@dimen/na_corner_medium</item>
         <item name="cornerLarge">@dimen/na_corner_large</item>
         <item name="cornerSpecific">@dimen/na_corner_specific</item>
+        
+        <!-- TextAppearance -->
+        <!-- Display -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.Nature.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.Nature.DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.Nature.DisplaySmall</item>
 
-        <!-- View Attrs -->
-        <item name="smoothCornerLayout">@style/Widget.Nathan.SmoothCornerLayout</item>
+        <!-- Headline -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Nature.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Nature.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Nature.HeadlineSmall</item>
+
+        <!-- Title -->
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Nature.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Nature.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.Nature.TitleSmall</item>
+
+        <!-- Body -->
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Nature.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Nature.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Nature.BodySmall</item>
+
+        <!-- Label -->
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Nature.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.Nature.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.Nature.LabelSmall</item>
+
+        <!-- View -->
+        <item name="button">@style/Widget.Nature.Button</item>
+        <item name="smoothCornerLayout">@style/Widget.Nature.SmoothCornerLayout</item>
     </style>
 
-    <style name="Theme.Nathan.DayNight" parent="Base.Theme.Nathan">
+    <style name="Theme.Nature.DayNight" parent="Base.Theme.Nature">
     </style>
 </resources>

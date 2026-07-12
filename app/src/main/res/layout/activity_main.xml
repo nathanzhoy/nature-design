@@ -7,95 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--<com.nathan.widget.SmoothCornerLayout
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:radius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:background="@android:color/holo_red_dark"
-            android:src="@mipmap/ic_launcher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </com.nathan.widget.SmoothCornerLayout>-->
-
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_button"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:text="平滑圆角"
-        android:textColor="?colorOnPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_button"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="圆角"
-        android:textColor="?colorOnPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.nathan.widget.SmoothCornerLayout
-        android:id="@+id/tv_container"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:color="?colorSurfaceVariant"
-        android:radius="?cornerMedium"
-        app:layout_constraintEnd_toEndOf="@id/tv"
-        app:layout_constraintStart_toStartOf="@id/tv"
-        app:layout_constraintTop_toBottomOf="@id/tv">
-
-        <ScrollView
-            android:background="@null"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="none">
-
-            <TextView
-                android:background="@null"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="正确用法是：确保通过obtainStyledAttributes() 并传入正确的参数，让系统在构造 TypedArray 时就完成属性解析，而不是把解析工作留给后续的 get 方法。是因为遇到崩溃了才在看这段源码吗？可以发一下你的具体代码，我帮你看一下问题出在哪儿。"
-                android:textColor="?colorOnSurfaceVariant"
-                android:textSize="12sp" />
-        </ScrollView>
-
-    </com.nathan.widget.SmoothCornerLayout>
-
-    <com.nathan.widget.SmoothCornerLayout
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:radius="?cornerMini"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_container">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_demo" />
-
-    </com.nathan.widget.SmoothCornerLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/func_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

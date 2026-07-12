@@ -12,4 +12,7 @@
         <attr name="android:radius" />
         <attr name="android:color" />
     </declare-styleable>
+
+    <attr name="button" format="reference" />
+    <declare-styleable name="NatureButton" />
 </resources>

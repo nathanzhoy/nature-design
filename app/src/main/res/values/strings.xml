@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Bezier</string>
+    <string name="app_name">Nature Widgets</string>
+    <string name="button">Button</string>
+    <string name="smooth_layout">SmoothLayout</string>
 </resources>
