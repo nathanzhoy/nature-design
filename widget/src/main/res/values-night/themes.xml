@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Nathan.DayNight" parent="Base.Theme.Nathan.Dark">
+<!--
+        <item name="colorPrimary">#09BD67</item>
+-->
+        <item name="cornerSmall">10dp</item>
+        <item name="smoothCornerLayout">@style/Widget.Nathan.SmoothCornerLayout</item>
+    </style>
+</resources>

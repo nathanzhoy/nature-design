@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- 夜间模式颜色 (Dark Theme)                     -->
+    <!-- ============================================ -->
+
+    <!-- 1. 强调色 (Accent Colors) -->
+    <color name="colorPrimary">#1368FB</color>
+    <color name="colorOnPrimary">#E6FFFFFF</color>
+    <color name="colorPrimaryContainer">#260088FF</color>
+    <color name="colorOnPrimaryContainer">#0088FF</color>
+
+    <color name="colorSecondary">#CCC2DC</color>
+    <color name="colorOnSecondary">#332D41</color>
+    <color name="colorSecondaryContainer">#4A4458</color>
+    <color name="colorOnSecondaryContainer">#E8DEF8</color>
+
+    <color name="colorTertiary">#EFB8C8</color>
+    <color name="colorOnTertiary">#492532</color>
+    <color name="colorTertiaryContainer">#633B48</color>
+    <color name="colorOnTertiaryContainer">#FFD8E4</color>
+
+    <!-- 2. 表面与背景色 (Surface & Background) -->
+    <color name="colorBackground">#1C1B1F</color>
+    <color name="colorOnBackground">#E6E1E5</color>
+    <color name="colorSurface">#24282E</color>
+    <color name="colorOnSurface">#E6FFFFFF</color>
+    <color name="colorSurfaceVariant">#121212</color>
+    <color name="colorOnSurfaceVariant">#80FFFFFF</color>
+
+    <!-- 3. 错误色 (Error Colors) -->
+    <color name="colorError">#D93B42</color>
+    <color name="colorOnError">#E6FFFFFF</color>
+    <color name="colorErrorContainer">#26FA565D</color>
+    <color name="colorOnErrorContainer">#FA565D</color>
+
+    <!-- 4. 轮廓色 (Outline Colors) -->
+    <color name="colorOutline">#0DFFFFFF</color>
+    <color name="colorOutlineVariant">#26FFFFFF</color>
+</resources>

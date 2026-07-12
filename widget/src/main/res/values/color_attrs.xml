@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 定义一组 Material 3 颜色 Token 属性 -->
+    <!-- 1. 强调色 (Accent Colors) -->
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorOnPrimary" format="color" />
+    <attr name="colorPrimaryContainer" format="color" />
+    <attr name="colorOnPrimaryContainer" format="color" />
+
+    <attr name="colorSecondary" format="color" />
+    <attr name="colorOnSecondary" format="color" />
+    <attr name="colorSecondaryContainer" format="color" />
+    <attr name="colorOnSecondaryContainer" format="color" />
+
+    <attr name="colorTertiary" format="color" />
+    <attr name="colorOnTertiary" format="color" />
+    <attr name="colorTertiaryContainer" format="color" />
+    <attr name="colorOnTertiaryContainer" format="color" />
+
+    <!-- 2. 表面与背景色 (Surface & Background) -->
+    <attr name="colorBackground" format="color" />
+    <attr name="colorOnBackground" format="color" />
+    <attr name="colorSurface" format="color" />
+    <attr name="colorOnSurface" format="color" />
+    <attr name="colorSurfaceVariant" format="color" />
+    <attr name="colorOnSurfaceVariant" format="color" />
+
+    <!-- 3. 错误色 (Error Colors) -->
+    <attr name="colorError" format="color" />
+    <attr name="colorOnError" format="color" />
+    <attr name="colorErrorContainer" format="color" />
+    <attr name="colorOnErrorContainer" format="color" />
+
+    <!-- 4. 轮廓色 (Outline Colors) -->
+    <attr name="colorOutline" format="color" />
+    <attr name="colorOutlineVariant" format="color" />
+</resources>

@@ -2,6 +2,8 @@ package com.nathan.widget
 
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -13,8 +15,14 @@ class SmoothCornerLayout @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     private val path = Path()
+    private val paint = Paint().apply {
+        style = Paint.Style.FILL
+        isAntiAlias = true
+        isDither = true
+    }
 
     private var radius = 0F
+    private var color = Color.WHITE
 
     init {
         clipChildren = true
@@ -25,6 +33,10 @@ class SmoothCornerLayout @JvmOverloads constructor(
             R.style.Widget_Nathan_SmoothCornerLayout
         ) {
             radius = getDimension(R.styleable.SmoothCornerLayout_android_radius, 20F)
+            color = getColor(R.styleable.SmoothCornerLayout_android_color, 0)
+            paint.apply {
+                color = this@SmoothCornerLayout.color
+            }
         }
     }
 
@@ -38,6 +50,9 @@ class SmoothCornerLayout @JvmOverloads constructor(
             val effectiveRadius = radius.coerceAtMost(width.coerceAtMost(height) / 2f)
             BezierPathUtils.bezierPath(width, height, effectiveRadius, path)
             canvas.withClip(path) {
+                if (color != Color.TRANSPARENT) {
+                    drawPath(path, paint)
+                }
                 super.dispatchDraw(canvas)
             }
             return

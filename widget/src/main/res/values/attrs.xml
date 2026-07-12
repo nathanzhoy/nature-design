@@ -3,6 +3,7 @@
     <attr name="smoothCornerLayout" format="reference" />
     <declare-styleable name="SmoothCornerLayout">
         <attr name="android:radius" />
+        <attr name="android:color" />
     </declare-styleable>
 
 
