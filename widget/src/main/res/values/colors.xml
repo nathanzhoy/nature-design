@@ -41,10 +41,10 @@
 
     <!-- Surface -->
     <color name="na_surface_dim">#FFFFFF</color>
-    <color name="na_surface">#DAE2EB</color>
+    <color name="na_surface">#F7F7F8</color>
     <color name="na_surface_bright">#CCD5E0</color>
-    <color name="na_surface_container">#ECF2F7</color>
-    <color name="na_surface_container_low">#E6F6FBFF</color>
+    <color name="na_surface_container">#E3E3E3</color>
+    <color name="na_surface_container_low">#ECF2F7</color>
     <color name="na_surface_container_high">#4D808A96</color>
     <color name="na_surface_container_highest">#99808A96</color>
 

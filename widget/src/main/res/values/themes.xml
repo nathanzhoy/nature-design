@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.Nature" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Nature" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary -->
         <item name="colorPrimary">@color/na_primary</item>
         <item name="colorPrimaryContainer">@color/na_primary_container</item>
@@ -122,9 +122,12 @@
 
         <!-- Dialog -->
         <item name="alertDialogTheme">@style/Theme.Nature.Dialog.DayNight</item>
+
         <!-- View -->
         <item name="button">@style/Widget.Nature.Button</item>
         <item name="smoothCornerLayout">@style/Widget.Nature.SmoothCornerLayout</item>
+
+        <item name="android:windowBackground">?colorSurface</item>
     </style>
 
     <style name="Theme.Nature.DayNight" parent="Base.Theme.Nature">

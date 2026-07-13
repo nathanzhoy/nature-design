@@ -34,7 +34,7 @@ class SmoothCornerLayout @JvmOverloads constructor(
             R.attr.smoothCornerLayout,
             R.style.Widget_Nature_SmoothCornerLayout
         ) {
-            radius = getDimension(R.styleable.SmoothCornerLayout_android_radius, 20F)
+            radius = getDimension(R.styleable.SmoothCornerLayout_android_radius, 0F)
             color = getColor(R.styleable.SmoothCornerLayout_android_color, 0)
             paint.apply {
                 color = this@SmoothCornerLayout.color

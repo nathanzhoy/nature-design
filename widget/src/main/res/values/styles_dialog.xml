@@ -9,11 +9,11 @@
     </style>
 
     <style name="Widget.Nature.Dialog.Button.Positive" parent="Widget.Nature.Button">
-        <item name="android:background">@drawable/na_bg_btn_simple</item>
+        <item name="android:background">@drawable/na_bg_dialog_btn_positive</item>
+        <item name="android:textColor">?colorOnPrimary</item>
     </style>
     <style name="Widget.Nature.Dialog.Button.Negative" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_negative</item>
-        <item name="android:textColor">?colorOnSurface</item>
     </style>
 
 
@@ -105,32 +105,23 @@
         <item name="colorOnPrimaryOrange">@color/na_on_primary_orange</item>
         <item name="colorPrimaryContainerOrange">@color/na_primary_container_orange</item>
 
+        <!-- alertDialogStyle以及button，因为被AlertDialog类wrapper过，导致Theme层alertDialogStyle失效，统一放这里 -->
         <item name="alertDialogStyle">@style/Widget.Nature.AlertDialog</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Nature.Dialog.Button.Positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Nature.Dialog.Button.Negative</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="windowMinWidthMajor">350dp</item>
-        <item name="windowMinWidthMinor">350dp</item>
-        <item name="android:windowMinWidthMajor">350dp</item>
-        <item name="android:windowMinWidthMinor">350dp</item>
-        <item name="windowFixedWidthMinor">350dp</item>
-        <item name="windowFixedWidthMajor">350dp</item>
+        <item name="windowMinWidthMajor">50%</item>
+        <item name="windowMinWidthMinor">90%</item>
+        <item name="android:windowMinWidthMajor">50%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
         <item name="dialogPreferredPadding">18dp</item>
-        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:backgroundDimAmount">0.8</item>
     </style>
 
     <!--白天模式Dialog 颜色style-->
     <style name="Theme.Nature.Dialog.DayNight" parent="Theme.Nature.Dialog" />
 
     <style name="Theme.Nature.Dialog.Alert" parent="Theme.Nature.Dialog.DayNight">
-        <item name="android:windowBackground">#FFFFFF</item>
-        <item name="windowMinWidthMajor">800dp</item>
-        <item name="windowMinWidthMinor">800dp</item>
-        <item name="android:windowMinWidthMajor">800dp</item>
-        <item name="android:windowMinWidthMinor">800dp</item>
-        <item name="windowFixedWidthMinor">800dp</item>
-        <item name="windowFixedWidthMajor">800dp</item>
-        <item name="dialogPreferredPadding">20dp</item>
-        <item name="android:backgroundDimAmount">0.7</item>
+
     </style>
 </resources>
