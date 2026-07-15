@@ -46,7 +46,7 @@
                     android:id="@android:id/message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?textAppearanceLabelSmall"
+                    android:textAppearance="?textAppearanceBodyMedium"
                     android:textColor="?colorOnSurfaceVariant" />
 
             </LinearLayout>

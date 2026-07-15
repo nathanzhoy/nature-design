@@ -124,8 +124,14 @@
         <item name="alertDialogTheme">@style/Theme.Nature.Dialog.DayNight</item>
 
         <!-- View -->
-        <item name="button">@style/Widget.Nature.Button</item>
-        <item name="smoothCornerLayout">@style/Widget.Nature.SmoothCornerLayout</item>
+        <item name="natureButtonStyle">@style/Widget.Nature.Button</item>
+        <item name="natureSmoothCornerLayoutStyle">@style/Widget.Nature.SmoothCornerLayout</item>
+        <item name="natureToolbarStyle">@style/Widget.Nature.Toolbar</item>
+        <item name="natureListItemViewStyle">@style/Widget.Nature.ListItemView</item>
+
+        <!-- Android -->
+        <item name="actionBarSize">64dp</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.Nature.NavigationIcon</item>
 
         <item name="android:windowBackground">?colorSurface</item>
     </style>

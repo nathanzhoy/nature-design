@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="Widget.Nature" parent=""/>
+
     <!-- 平滑圆角布局样式 -->
     <style name="Widget.Nature.SmoothCornerLayout" parent="">
         <item name="android:radius">?cornerSmall</item>
@@ -12,7 +15,7 @@
         <item name="android:paddingHorizontal">12dp</item>
         <item name="backgroundTint">@null</item>
         <item name="shapeAppearance">@null</item>
-        <item name="android:textAppearance">?textAppearanceLabelSmall</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
         <item name="strokeWidth">0dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:insetTop">0dp</item>
@@ -22,5 +25,33 @@
         <item name="rippleColor">@null</item>
         <item name="android:minWidth">80dp</item>
         <item name="android:minHeight">32dp</item>
+    </style>
+
+    <!-- 标题栏 -->
+    <style name="Widget.Nature.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@drawable/na_bg_toolbar</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="titleTextAppearance">?textAppearanceTitleMedium</item>
+        <item name="subtitleTextAppearance">?textAppearanceBodyLarge</item>
+        <item name="paddingStart">10dp</item>
+        <item name="buttonGravity">center_vertical</item>
+        <item name="paddingEnd">10dp</item>
+        <item name="contentInsetStart">20dp</item>
+        <item name="contentInsetEnd">20dp</item>
+        <item name="titleMargins">0dp</item>
+        <item name="navigationIcon">@drawable/na_ic_back</item>
+    </style>
+
+    <!-- 标题栏返回按钮 -->
+    <style name="Widget.Nature.NavigationIcon" parent="Widget.Material3.Search.Toolbar.Button.Navigation">
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:background">@null</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Widget.Nature.ListItemView">
+        <item name="android:background">@drawable/na_bg_list_item_view</item>
+        <item name="android:padding">10dp</item>
     </style>
 </resources>

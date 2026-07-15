@@ -2,87 +2,71 @@
 <resources>
     <!-- 基础样式，定义默认字体 -->
     <style name="TextAppearance.Nature" parent="TextAppearance.AppCompat">
-        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- ==================== Display ==================== -->
     <style name="TextAppearance.Nature.DisplayLarge" parent="TextAppearance.Nature">
         <item name="android:textSize">70sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <style name="TextAppearance.Nature.DisplayMedium" parent="TextAppearance.Nature">
         <item name="android:textSize">66sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <style name="TextAppearance.Nature.DisplaySmall" parent="TextAppearance.Nature">
         <item name="android:textSize">62sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <!-- ==================== Headline ==================== -->
     <style name="TextAppearance.Nature.HeadlineLarge" parent="TextAppearance.Nature">
         <item name="android:textSize">58sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <style name="TextAppearance.Nature.HeadlineMedium" parent="TextAppearance.Nature">
         <item name="android:textSize">52sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <style name="TextAppearance.Nature.HeadlineSmall" parent="TextAppearance.Nature">
         <item name="android:textSize">44sp</item>
-        <item name="android:fontWeight">400</item>
     </style>
 
     <!-- ==================== Title ==================== -->
     <style name="TextAppearance.Nature.TitleLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">40sp</item>
-        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">26sp</item>
     </style>
 
     <style name="TextAppearance.Nature.TitleMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">36sp</item>
-        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">24sp</item>
     </style>
 
     <style name="TextAppearance.Nature.TitleSmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">32sp</item>
-        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">22sp</item>
     </style>
 
     <!-- ==================== Body ==================== -->
     <style name="TextAppearance.Nature.BodyLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">24sp</item>
-        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="TextAppearance.Nature.BodyMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">22sp</item>
-        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="TextAppearance.Nature.BodySmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">20sp</item>
-        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <!-- ==================== Label ==================== -->
     <!-- Label Large 常用于按钮文字 -->
     <style name="TextAppearance.Nature.LabelLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">24sp</item>
-        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="TextAppearance.Nature.LabelMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">22sp</item>
-        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="TextAppearance.Nature.LabelSmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">18sp</item>
-        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">10sp</item>
     </style>
 </resources>

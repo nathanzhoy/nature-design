@@ -3,4 +3,5 @@
     <string name="button">按钮</string>
     <string name="smooth_layout">平滑布局</string>
     <string name="dialog">弹窗</string>
+    <string name="common_dialog">普通弹窗</string>
 </resources>

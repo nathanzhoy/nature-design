@@ -44,7 +44,7 @@
     <color name="na_surface">#24282E</color>
     <color name="na_surface_bright">#121212</color>
     <color name="na_surface_container">#30363E</color>
-    <color name="na_surface_container_low">#66495460</color>
+    <color name="na_surface_container_low">#4A000000</color>
     <color name="na_surface_container_high">#992E343B</color>
     <color name="na_surface_container_highest">#9969747F</color>
 

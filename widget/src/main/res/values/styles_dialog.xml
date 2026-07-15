@@ -11,9 +11,11 @@
     <style name="Widget.Nature.Dialog.Button.Positive" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_positive</item>
         <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
     </style>
     <style name="Widget.Nature.Dialog.Button.Negative" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_negative</item>
+        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
     </style>
 
 

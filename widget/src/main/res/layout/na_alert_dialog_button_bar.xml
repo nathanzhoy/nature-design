@@ -20,14 +20,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.nathan.widget.ui.Button
+    <com.nathan.widget.ui.view.NatureButton
         android:id="@android:id/button1"
         style="?attr/buttonBarPositiveButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
-    <com.nathan.widget.ui.Button
+    <com.nathan.widget.ui.view.NatureButton
         android:id="@android:id/button2"
         style="?attr/buttonBarNegativeButtonStyle"
         android:layout_width="0dp"
@@ -35,7 +35,7 @@
         android:layout_marginStart="?dialogPreferredPadding"
         android:layout_weight="1" />
 
-    <com.nathan.widget.ui.Button
+    <com.nathan.widget.ui.view.NatureButton
         android:id="@android:id/button3"
         style="?attr/buttonBarNeutralButtonStyle"
         android:layout_width="0dp"

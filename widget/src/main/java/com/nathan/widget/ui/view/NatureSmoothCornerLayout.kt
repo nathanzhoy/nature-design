@@ -1,4 +1,4 @@
-package com.nathan.widget.ui
+package com.nathan.widget.ui.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,12 +9,14 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import androidx.core.graphics.withClip
-import com.nathan.widget.util.BezierPathUtils
 import com.nathan.widget.R
+import com.nathan.widget.util.BezierPathUtils
 
-class SmoothCornerLayout @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : FrameLayout(context, attrs, defStyleAttr) {
+class NatureSmoothCornerLayout @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defAttr: Int = R.attr.natureSmoothCornerLayoutStyle
+) : FrameLayout(context, attrs, defAttr) {
 
     private val path = Path()
     private val paint = Paint().apply {
@@ -30,14 +32,14 @@ class SmoothCornerLayout @JvmOverloads constructor(
         clipChildren = true
         context.withStyledAttributes(
             attrs,
-            R.styleable.SmoothCornerLayout,
-            R.attr.smoothCornerLayout,
+            R.styleable.NatureSmoothCornerLayout,
+            defAttr,
             R.style.Widget_Nature_SmoothCornerLayout
         ) {
-            radius = getDimension(R.styleable.SmoothCornerLayout_android_radius, 0F)
-            color = getColor(R.styleable.SmoothCornerLayout_android_color, 0)
+            radius = getDimension(R.styleable.NatureSmoothCornerLayout_android_radius, 0F)
+            color = getColor(R.styleable.NatureSmoothCornerLayout_android_color, 0)
             paint.apply {
-                color = this@SmoothCornerLayout.color
+                color = this@NatureSmoothCornerLayout.color
             }
         }
     }

@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/func_title"
+    <com.nathan.widget.ui.list.NatureListItemView
+        android:id="@+id/func_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"

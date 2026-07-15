@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 平滑圆角布局样式声明 -->
-    <attr name="smoothCornerLayout" format="reference" />
-    <declare-styleable name="SmoothCornerLayout">
+    <attr name="natureSmoothCornerLayoutStyle" format="reference" />
+    <declare-styleable name="NatureSmoothCornerLayout">
         <attr name="android:radius" />
         <attr name="android:color" />
     </declare-styleable>
@@ -13,6 +13,18 @@
         <attr name="android:color" />
     </declare-styleable>
 
-    <attr name="button" format="reference" />
+    <attr name="natureButtonStyle" format="reference" />
     <declare-styleable name="NatureButton" />
+
+    <attr name="natureToolbarStyle" format="reference" />
+    <declare-styleable name="NatureToolbar">
+
+    </declare-styleable>
+
+    <attr name="natureListItemViewStyle" format="reference" />
+    <declare-styleable name="NatureListItemView">
+        <attr name="android:title" />
+        <attr name="android:summary" />
+        <attr name="isForwarding" format="boolean" />
+    </declare-styleable>
 </resources>
