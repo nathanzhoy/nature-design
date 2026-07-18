@@ -25,6 +25,15 @@
     <declare-styleable name="NatureListItemView">
         <attr name="android:title" />
         <attr name="android:summary" />
-        <attr name="isForwarding" format="boolean" />
+        <attr name="mode" format="enum">
+            <enum name="custom" value="0" />
+            <enum name="toggle" value="1" />
+            <enum name="dot" value="2" />
+            <enum name="number" value="3" />
+        </attr>
+        <!-- 自定义布局 -->
+        <attr name="android:layout" />
+        <attr name="avatar" format="reference" />
+        <attr name="tip" format="reference" />
     </declare-styleable>
 </resources>

@@ -9,15 +9,14 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@android:id/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/na_ic_left_arrow"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@android:id/title"
@@ -31,7 +30,7 @@
         tools:text="@string/lib_name" />
 
     <ImageView
-        android:id="@+id/info"
+        android:id="@+id/tip"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
@@ -51,15 +50,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@android:id/title"
         app:layout_constraintTop_toBottomOf="@android:id/title"
-        tools:text="@string/lib_name" />
+        tools:text="@string/lib_name"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/extra_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxWidth="100dp"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceBodyMedium"
+        android:textColor="?colorOnSurfaceVariant"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/custom_layout"
+        app:layout_constraintEnd_toStartOf="@id/custom_layout"
+        app:layout_constraintTop_toTopOf="@id/custom_layout"
+        tools:text="@string/lib_name"
+        tools:visibility="visible" />
 
     <FrameLayout
         android:id="@+id/custom_layout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/forwarding"
+        app:layout_constraintEnd_toStartOf="@id/forwarding"
+        app:layout_constraintTop_toTopOf="@id/forwarding" />
 
     <ImageView
-        android:id="@+id/arrow"
+        android:id="@+id/forwarding"
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:padding="5dp"

@@ -1,6 +1,5 @@
 package com.nathan.widget.app
 
-import android.R.attr.text
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,6 +9,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityMainBinding
@@ -31,9 +31,10 @@ class MainActivity : BaseActivity() {
 
     private fun setupFuncMap() {
         funcMap = mapOf(
-            getString(R.string.button) to "小按钮、大按钮",
-            getString(R.string.dialog) to "小弹窗、大弹窗",
-            getString(R.string.smooth_layout) to "各种平滑圆角"
+            getString(R.string.button) to getString(R.string.button_func_summary),
+            getString(R.string.dialog) to getString(R.string.dialog_func_summary),
+            getString(R.string.smooth_layout) to getString(R.string.smooth_corner_func_summary),
+            getString(R.string.list) to getString(R.string.list_func_summary)
         )
     }
 
@@ -97,6 +98,9 @@ class MainActivity : BaseActivity() {
             holder.binding.funcItem.setOnClickListener {
                 val info = data[pos].info.activityInfo
                 it.context.startActivity(ComponentName(info.packageName, info.name))
+            }
+            holder.binding.funcItem.setOnTipViewClickListener {
+                Toast.makeText(it.context, "点击Tip", Toast.LENGTH_SHORT).show()
             }
         }
 

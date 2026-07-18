@@ -11,7 +11,7 @@ import android.view.animation.DecelerateInterpolator
 @SuppressLint("ClickableViewAccessibility")
 class PressAnimUtils(
     private val view: View,
-    private val scaleRatio: Float = 0.9f,
+    private val scaleRatio: Float = 0.95F,
     private val duration: Long = 200L
 ) {
 
@@ -22,14 +22,18 @@ class PressAnimUtils(
     private var currentAnimator: AnimatorSet? = null
 
     init {
-        view.setOnTouchListener { _, event ->
+        view.setOnTouchListener { v, event ->
+            if (v.isEnabled.not() || v.isClickable.not()) {
+                Log.i(TAG, "onTouch view is disabled, ignore press")
+                return@setOnTouchListener false
+            }
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     scaleView(scaleRatio)
                 }
 
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                    scaleView(1.0f)
+                    scaleView(1.0F)
                 }
             }
             false
@@ -54,7 +58,7 @@ class PressAnimUtils(
         currentAnimator?.cancel()
         currentAnimator = null
         view.setOnTouchListener(null)
-        view.scaleX = 1.0f
-        view.scaleY = 1.0f
+        view.scaleX = 1.0F
+        view.scaleY = 1.0F
     }
 }

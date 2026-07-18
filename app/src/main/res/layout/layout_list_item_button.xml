@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nathan.widget.ui.view.NatureButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button"
+    android:text="@string/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</com.nathan.widget.ui.view.NatureButton>
