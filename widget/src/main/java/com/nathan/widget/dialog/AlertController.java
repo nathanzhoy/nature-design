@@ -143,7 +143,7 @@ class AlertController {
             }
 
             // Post a message so we dismiss after the above handlers are executed
-            mHandler.obtainMessage(AlertController.ButtonHandler.MSG_DISMISS_DIALOG, mDialog)
+            mHandler.obtainMessage(ButtonHandler.MSG_DISMISS_DIALOG, mDialog)
                     .sendToTarget();
         }
     };
@@ -184,7 +184,7 @@ class AlertController {
         mContext = context;
         mDialog = di;
         mWindow = window;
-        mHandler = new AlertController.ButtonHandler(di);
+        mHandler = new ButtonHandler(di);
 
         final TypedArray a = context.obtainStyledAttributes(null, R.styleable.AlertDialog,
                 R.attr.alertDialogStyle, 0);
@@ -199,7 +199,6 @@ class AlertController {
         mListItemLayout = a.getResourceId(R.styleable.AlertDialog_listItemLayout, 0);
         mShowTitle = a.getBoolean(R.styleable.AlertDialog_showTitle, true);
         mButtonIconDimen = a.getDimensionPixelSize(R.styleable.AlertDialog_buttonIconDimen, 0);
-
         a.recycle();
 
         /* We use a custom title so never request a window title */
@@ -232,6 +231,14 @@ class AlertController {
         final int contentView = selectContentView();
         mDialog.setContentView(contentView);
         setupView();
+        applyMaxHeight();
+    }
+
+    private void applyMaxHeight() {
+        /*AlertDialogLayout alertDialogLayout = mDialog.findViewById(com.nathan.widget.R.id.parentPanel);
+        if (alertDialogLayout != null && mMaxHeight != 0F) {
+            alertDialogLayout.setMaxHeight((int) mMaxHeight);
+        }*/
     }
 
     private int selectContentView() {
@@ -529,19 +536,8 @@ class AlertController {
             }
         }
 
-        if (mListView instanceof AlertController.RecycleListView) {
-            ((AlertController.RecycleListView) mListView).setHasDecor(hasTopPanel, hasButtonPanel);
-        }
-
-        // Update scroll indicators as needed.
-        if (!hasCustomPanel) {
-            final View content = mListView != null ? mListView : mScrollView;
-            if (content != null) {
-                final int indicators = (hasTopPanel ? ViewCompat.SCROLL_INDICATOR_TOP : 0)
-                        | (hasButtonPanel ? ViewCompat.SCROLL_INDICATOR_BOTTOM : 0);
-                setScrollIndicators(contentPanel, content, indicators,
-                        ViewCompat.SCROLL_INDICATOR_TOP | ViewCompat.SCROLL_INDICATOR_BOTTOM);
-            }
+        if (mListView instanceof RecycleListView) {
+            ((RecycleListView) mListView).setHasDecor(hasTopPanel, hasButtonPanel);
         }
 
         final ListView listView = mListView;
@@ -551,87 +547,6 @@ class AlertController {
             if (checkedItem > -1) {
                 listView.setItemChecked(checkedItem, true);
                 listView.setSelection(checkedItem);
-            }
-        }
-    }
-
-    private void setScrollIndicators(ViewGroup contentPanel, View content,
-                                     final int indicators, final int mask) {
-        // Set up scroll indicators (if present).
-        View indicatorUp = mWindow.findViewById(R.id.scrollIndicatorUp);
-        View indicatorDown = mWindow.findViewById(R.id.scrollIndicatorDown);
-
-        if (Build.VERSION.SDK_INT >= 23) {
-            // We're on Marshmallow so can rely on the View APIs
-            ViewCompat.setScrollIndicators(content, indicators, mask);
-            // We can also remove the compat indicator views
-            if (indicatorUp != null) {
-                contentPanel.removeView(indicatorUp);
-            }
-            if (indicatorDown != null) {
-                contentPanel.removeView(indicatorDown);
-            }
-        } else {
-            // First, remove the indicator views if we're not set to use them
-            if (indicatorUp != null && (indicators & ViewCompat.SCROLL_INDICATOR_TOP) == 0) {
-                contentPanel.removeView(indicatorUp);
-                indicatorUp = null;
-            }
-            if (indicatorDown != null && (indicators & ViewCompat.SCROLL_INDICATOR_BOTTOM) == 0) {
-                contentPanel.removeView(indicatorDown);
-                indicatorDown = null;
-            }
-
-            if (indicatorUp != null || indicatorDown != null) {
-                final View top = indicatorUp;
-                final View bottom = indicatorDown;
-
-                if (mMessage != null) {
-                    // We're just showing the ScrollView, set up listener.
-                    mScrollView.setOnScrollChangeListener(
-                            new NestedScrollView.OnScrollChangeListener() {
-                                @Override
-                                public void onScrollChange(NestedScrollView v, int scrollX,
-                                                           int scrollY,
-                                                           int oldScrollX, int oldScrollY) {
-                                    manageScrollIndicators(v, top, bottom);
-                                }
-                            });
-                    // Set up the indicators following layout.
-                    mScrollView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            manageScrollIndicators(mScrollView, top, bottom);
-                        }
-                    });
-                } else if (mListView != null) {
-                    // We're just showing the AbsListView, set up listener.
-                    mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
-                        @Override
-                        public void onScrollStateChanged(AbsListView view, int scrollState) {}
-
-                        @Override
-                        public void onScroll(AbsListView v, int firstVisibleItem,
-                                             int visibleItemCount, int totalItemCount) {
-                            manageScrollIndicators(v, top, bottom);
-                        }
-                    });
-                    // Set up the indicators following layout.
-                    mListView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            manageScrollIndicators(mListView, top, bottom);
-                        }
-                    });
-                } else {
-                    // We don't have any content to scroll, remove the indicators.
-                    if (top != null) {
-                        contentPanel.removeView(top);
-                    }
-                    if (bottom != null) {
-                        contentPanel.removeView(bottom);
-                    }
-                }
             }
         }
     }
@@ -674,7 +589,7 @@ class AlertController {
         if (mCustomTitleView != null) {
             // Add the custom title view directly to the topPanel layout
             LayoutParams lp = new LayoutParams(
-                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+                    MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
             topPanel.addView(mCustomTitleView, 0, lp);
 
@@ -906,7 +821,7 @@ class AlertController {
         public String mIsCheckedColumn;
         public boolean mForceInverseBackground;
         public AdapterView.OnItemSelectedListener mOnItemSelectedListener;
-        public AlertController.AlertParams.OnPrepareListViewListener mOnPrepareListViewListener;
+        public OnPrepareListViewListener mOnPrepareListViewListener;
         public boolean mRecycleOnMeasure = true;
 
         /**
@@ -986,8 +901,8 @@ class AlertController {
         }
 
         private void createListView(final AlertController dialog) {
-            final AlertController.RecycleListView listView =
-                    (AlertController.RecycleListView) mInflater.inflate(dialog.mListLayout, null);
+            final RecycleListView listView =
+                    (RecycleListView) mInflater.inflate(dialog.mListLayout, null);
             final ListAdapter adapter;
 
             if (mIsMultiChoice) {
@@ -1048,7 +963,7 @@ class AlertController {
                 } else if (mAdapter != null) {
                     adapter = mAdapter;
                 } else {
-                    adapter = new AlertController.CheckedItemAdapter(mContext, layout, android.R.id.text1, mItems);
+                    adapter = new CheckedItemAdapter(mContext, layout, android.R.id.text1, mItems);
                 }
             }
 

@@ -4,4 +4,10 @@
     <string name="smooth_layout">平滑布局</string>
     <string name="dialog">弹窗</string>
     <string name="common_dialog">普通弹窗</string>
+    <string name="scrollable_dialog">滚动弹窗</string>
+    <string name="title">标题</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="test_text_long">潮水中沉默着被遗忘的名字，他们溺死于自作多情的泡沫。</string>
+    <string name="test_text_super_long">潮水中沉默着被遗忘的名字，他们溺死于自作多情的泡沫。潮水中沉默着被遗忘的名字，他们溺死于自作多情的泡沫。潮水中沉默着被遗忘的名字，他们溺死于自作多情的泡沫。潮水中沉默着被遗忘的名字，他们溺死于自作多情的泡沫。</string>
 </resources>

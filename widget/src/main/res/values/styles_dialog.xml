@@ -3,6 +3,7 @@
     <style name="Widget.Nature.AlertDialog" parent="MaterialAlertDialog.MaterialComponents">
         <!--<item name="listLayout">@layout/fa_select_dialog_list</item>-->
         <item name="android:layout">@layout/na_alert_dialog</item>
+        <item name="android:maxHeight">100dp</item>
         <!--<item name="multiChoiceItemLayout">@layout/fa_dialog_item_with_check_box</item>
         <item name="singleChoiceItemLayout">@layout/fa_dialog_item_with_check_text</item>
         <item name="android:maxHeight">@dimen/fa_dialog_alert_max_height</item>-->
@@ -11,11 +12,11 @@
     <style name="Widget.Nature.Dialog.Button.Positive" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_positive</item>
         <item name="android:textColor">?colorOnPrimary</item>
-        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
     </style>
     <style name="Widget.Nature.Dialog.Button.Negative" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_negative</item>
-        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
     </style>
 
 
@@ -116,8 +117,10 @@
         <item name="windowMinWidthMinor">90%</item>
         <item name="android:windowMinWidthMajor">50%</item>
         <item name="android:windowMinWidthMinor">90%</item>
+        <!--<item name="windowFixedHeightMajor">40%</item>
+        <item name="windowFixedHeightMinor">50%</item>-->
         <item name="dialogPreferredPadding">18dp</item>
-        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:backgroundDimAmount">0.5</item>
     </style>
 
     <!--白天模式Dialog 颜色style-->

@@ -38,7 +38,8 @@
         android:src="@drawable/na_ic_info"
         app:layout_constraintBottom_toBottomOf="@android:id/title"
         app:layout_constraintStart_toEndOf="@android:id/title"
-        app:layout_constraintTop_toTopOf="@android:id/title" />
+        app:layout_constraintTop_toTopOf="@android:id/title"
+        app:tint="?colorOnSurfaceVariant" />
 
     <TextView
         android:id="@android:id/summary"
@@ -65,6 +66,7 @@
         android:src="@drawable/na_ic_right_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?colorOnSurfaceVariant" />
 
 </merge>
