@@ -7,16 +7,25 @@
     android:padding="10dp"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-    <ImageView
-        android:id="@+id/avatar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:visibility="gone"
+
+    <com.nathan.widget.ui.view.NatureSmoothCornerLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:radius="?cornerMini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/na_ic_left_arrow"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            tools:src="@drawable/na_ic_left_arrow"
+            tools:visibility="visible" />
+
+    </com.nathan.widget.ui.view.NatureSmoothCornerLayout>
 
     <TextView
         android:id="@android:id/title"
@@ -25,7 +34,7 @@
         android:textAppearance="?textAppearanceBodyLarge"
         android:textColor="?colorOnSurface"
         app:layout_constraintBottom_toTopOf="@android:id/summary"
-        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintStart_toEndOf="@id/avatar_container"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/lib_name" />
 
@@ -44,7 +53,7 @@
         android:id="@android:id/summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?textAppearanceBodyMedium"
+        android:textAppearance="?textAppearanceLabelLarge"
         android:textColor="?colorOnSurfaceVariant"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +70,7 @@
         android:ellipsize="end"
         android:maxWidth="100dp"
         android:maxLines="1"
-        android:textAppearance="?textAppearanceBodyMedium"
+        android:textAppearance="?textAppearanceLabelLarge"
         android:textColor="?colorOnSurfaceVariant"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/custom_layout"

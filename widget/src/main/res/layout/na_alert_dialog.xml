@@ -18,7 +18,7 @@
     android:id="@+id/parentPanel"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/na_bg_dialog_simple"
+    android:background="@drawable/na_bg_dialog"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="18dp">

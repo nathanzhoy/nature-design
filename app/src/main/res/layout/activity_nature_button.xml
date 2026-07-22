@@ -6,12 +6,78 @@
 
     <com.nathan.widget.ui.view.NatureButton
         android:id="@+id/btn_small"
+        style="@style/Widget.Nature.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_small" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_blue"
+        style="@style/Widget.Nature.Button.Fix.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_normal" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_red"
+        style="@style/Widget.Nature.Button.Fix.Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_blue" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_green"
+        style="@style/Widget.Nature.Button.Fix.Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_red" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_orange"
+        style="@style/Widget.Nature.Button.Fix.Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@id/btn_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_green" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_yellow"
+        style="@style/Widget.Nature.Button.Fix.Yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btn_green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

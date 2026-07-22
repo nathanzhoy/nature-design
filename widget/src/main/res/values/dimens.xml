@@ -5,4 +5,10 @@
     <dimen name="na_corner_medium">18dp</dimen>
     <dimen name="na_corner_large">24dp</dimen>
     <dimen name="na_corner_specific">30dp</dimen>
+
+    <dimen name="na_margin_mini">4dp</dimen>
+    <dimen name="na_margin_small">8dp</dimen>
+    <dimen name="na_margin_medium">12dp</dimen>
+    <dimen name="na_margin_large">16dp</dimen>
+    <dimen name="na_margin_specific">20dp</dimen>
 </resources>

@@ -15,4 +15,6 @@
     <string name="smooth_corner_func_summary">各种平滑圆角</string>
     <string name="list">列表</string>
     <string name="list_func_summary">预制各种样式的列表样式</string>
+    <string name="edit_text">输入框</string>
+    <string name="edit_func_summary">各种样式输入框</string>
 </resources>

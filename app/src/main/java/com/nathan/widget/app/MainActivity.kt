@@ -34,7 +34,8 @@ class MainActivity : BaseActivity() {
             getString(R.string.button) to getString(R.string.button_func_summary),
             getString(R.string.dialog) to getString(R.string.dialog_func_summary),
             getString(R.string.smooth_layout) to getString(R.string.smooth_corner_func_summary),
-            getString(R.string.list) to getString(R.string.list_func_summary)
+            getString(R.string.list) to getString(R.string.list_func_summary),
+            getString(R.string.edit_text) to getString(R.string.edit_func_summary)
         )
     }
 

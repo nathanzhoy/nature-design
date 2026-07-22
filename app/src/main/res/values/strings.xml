@@ -12,7 +12,9 @@
     <string name="test_text_super_long">The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.</string>
     <string name="button_func_summary">Small button, Big button</string>
     <string name="dialog_func_summary">Small dialog, Big dialog</string>
-    <string name="smooth_corner_func_summary">Many kinds of smooth corner layout</string>
+    <string name="smooth_corner_func_summary">Many kinds of smooth corner layout styles</string>
     <string name="list">List</string>
-    <string name="list_func_summary">Many kinds of list item style</string>
+    <string name="list_func_summary">Many kinds of list item styles</string>
+    <string name="edit_text">EditText</string>
+    <string name="edit_func_summary">Many kinds of edit text styles</string>
 </resources>

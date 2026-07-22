@@ -93,6 +93,13 @@
         <item name="cornerMedium">@dimen/na_corner_medium</item>
         <item name="cornerLarge">@dimen/na_corner_large</item>
         <item name="cornerSpecific">@dimen/na_corner_specific</item>
+
+        <!-- Margin or Padding -->
+        <item name="marginMini">@dimen/na_margin_mini</item>
+        <item name="marginSmall">@dimen/na_margin_small</item>
+        <item name="marginMedium">@dimen/na_margin_medium</item>
+        <item name="marginLarge">@dimen/na_margin_large</item>
+        <item name="marginSpecific">@dimen/na_margin_specific</item>
         
         <!-- TextAppearance -->
         <!-- Display -->
@@ -124,10 +131,13 @@
         <item name="alertDialogTheme">@style/Theme.Nature.Dialog.DayNight</item>
 
         <!-- View -->
+        <item name="natureIcon">@style/Widget.Nature.Icon</item>
+        <item name="natureIconSmall">@style/Widget.Nature.Icon.Small</item>
         <item name="natureButtonStyle">@style/Widget.Nature.Button</item>
         <item name="natureSmoothCornerLayoutStyle">@style/Widget.Nature.SmoothCornerLayout</item>
         <item name="natureToolbarStyle">@style/Widget.Nature.Toolbar</item>
         <item name="natureListItemViewStyle">@style/Widget.Nature.ListItemView</item>
+        <item name="natureEditTextStyle">@style/Widget.Nature.EditText</item>
 
         <!-- Android -->
         <item name="actionBarSize">64dp</item>

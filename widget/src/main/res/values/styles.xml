@@ -3,28 +3,20 @@
 
     <style name="Widget.Nature" parent=""/>
 
+
+    <style name="Widget.Nature.Icon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+    <!-- 通用小图标样式 -->
+    <style name="Widget.Nature.Icon.Small">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+    </style>
+
     <!-- 平滑圆角布局样式 -->
     <style name="Widget.Nature.SmoothCornerLayout" parent="">
         <item name="android:radius">?cornerSmall</item>
-    </style>
-
-    <!-- 普通按钮, 只支持简单的文本显示 -->
-    <style name="Widget.Nature.Button" parent="Widget.MaterialComponents.Button">
-        <item name="elevation">0dp</item>
-        <item name="android:paddingVertical">8dp</item>
-        <item name="android:paddingHorizontal">12dp</item>
-        <item name="backgroundTint">@null</item>
-        <item name="shapeAppearance">@null</item>
-        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
-        <item name="strokeWidth">0dp</item>
-        <item name="android:stateListAnimator">@null</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-        <item name="android:textColor">@color/na_btn_text_color_simple</item>
-        <item name="android:background">@drawable/na_bg_btn_simple</item>
-        <item name="rippleColor">@null</item>
-        <item name="android:minWidth">80dp</item>
-        <item name="android:minHeight">32dp</item>
     </style>
 
     <!-- 标题栏 -->
@@ -50,8 +42,16 @@
         <item name="android:clickable">true</item>
     </style>
 
+    <!-- 列表 -->
     <style name="Widget.Nature.ListItemView">
         <item name="android:background">@drawable/na_bg_list_item_view</item>
         <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- 输入框 -->
+    <style name="Widget.Nature.EditText">
+        <item name="android:background">@drawable/na_bg_edit_text</item>
+        <item name="android:maxLines">1</item>
+        <item name="showClear">true</item>
     </style>
 </resources>

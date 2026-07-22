@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- 通用图标 -->
+    <attr name="natureIcon" format="reference" />
+    <!-- 通用小图标 -->
+    <attr name="natureIconSmall" format="reference" />
+
     <!-- 平滑圆角布局样式声明 -->
     <attr name="natureSmoothCornerLayoutStyle" format="reference" />
     <declare-styleable name="NatureSmoothCornerLayout">
@@ -35,5 +41,17 @@
         <attr name="android:layout" />
         <attr name="avatar" format="reference" />
         <attr name="tip" format="reference" />
+    </declare-styleable>
+
+    <attr name="natureEditTextStyle" format="reference" />
+    <declare-styleable name="NatureEditText">
+        <attr name="showClear" format="boolean" />
+        <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:imeActionId" />
+        <attr name="android:imeActionLabel" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
     </declare-styleable>
 </resources>

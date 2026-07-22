@@ -108,6 +108,7 @@ class ListActivity : BaseActivity() {
             override fun onBindViewHolder(holder: ListItemViewHolder, pos: Int) {
                 val model = models[pos]
                 val listView = holder.binding.root.findViewById<NatureListItemView>(R.id.list_view)
+                listView.setAvatar(model.avatar)
                 listView.setTitle(model.title)
                 listView.setSummary(model.summary)
                 listView.setExtraSummary(model.extra)
@@ -163,12 +164,20 @@ class ListActivity : BaseActivity() {
 
     private fun getListModel(): MutableList<ListItemModel> {
         return mutableListOf<ListItemModel>().apply {
-            add(ListItemModel("前进", "预设前进布局（默认）", "警告", Type.FORWARDING))
-            add(ListItemModel("开关", "预设开关布局", "警告", Type.SWITCH))
-            add(ListItemModel("提示", "预设提示布局", "警告", Type.DOT))
-            add(ListItemModel("数字", "预设数字布局", "警告", Type.NUMBER))
+            add(
+                ListItemModel(
+                    R.drawable.ic_demo,
+                    "前进Forwarding",
+                    "预设前进布局（默认）",
+                    "警告",
+                    Type.FORWARDING
+                )
+            )
+            add(ListItemModel(R.drawable.ic_demo, "开关Toggle", "预设开关布局", "警告", Type.SWITCH))
+            add(ListItemModel(R.drawable.ic_demo, "点Dot", "预设提示布局", "警告", Type.DOT))
+            add(ListItemModel(R.drawable.ic_demo, "数字Number", "预设数字布局", "警告", Type.NUMBER))
 
-            add(ListItemModel("按钮", "自定义按钮布局", "警告", Type.BUTTON))
+            add(ListItemModel(R.drawable.ic_demo, "按钮Custom", "自定义按钮布局", "警告", Type.BUTTON))
         }
     }
 
@@ -189,5 +198,11 @@ class ListActivity : BaseActivity() {
         NUMBER
     }
 
-    class ListItemModel(var title: String, var summary: String, val extra: String, var type: Type)
+    class ListItemModel(
+        var avatar: Int,
+        var title: String,
+        var summary: String,
+        val extra: String,
+        var type: Type
+    )
 }

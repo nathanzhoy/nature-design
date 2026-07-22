@@ -1,18 +1,17 @@
 package com.nathan.widget.ui.list
 
-import android.app.ProgressDialog.show
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.util.Log.i
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.CompoundButton
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.SwitchCompat
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.withStyledAttributes
 import com.nathan.widget.R
 import com.nathan.widget.util.PressAnimUtils
@@ -20,7 +19,6 @@ import com.nathan.widget.util.ScreenUtils
 import com.nathan.widget.util.gone
 import com.nathan.widget.util.visibility
 import com.nathan.widget.util.visible
-import org.w3c.dom.Text
 
 class NatureListItemView @JvmOverloads constructor(
     context: Context,
@@ -96,6 +94,8 @@ class NatureListItemView @JvmOverloads constructor(
         }
     }
 
+    fun getCustomLayout() = customLayout
+
     private fun setupInitMode() {
         when (mode) {
             Mode.TOGGLE -> {
@@ -138,6 +138,10 @@ class NatureListItemView @JvmOverloads constructor(
 
     fun setOnTipViewClickListener(listener: OnClickListener) {
         tipView.setOnClickListener(listener)
+    }
+
+    fun setAvatar(@DrawableRes resId: Int) {
+        setAvatar(ResourcesCompat.getDrawable(context.resources, resId, context.theme))
     }
 
     fun setAvatar(drawable: Drawable?) {

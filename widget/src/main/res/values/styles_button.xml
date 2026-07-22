@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 普通按钮, 只支持简单的文本显示 -->
+    <style name="Widget.Nature.Button" parent="Widget.MaterialComponents.Button">
+        <item name="elevation">0dp</item>
+        <item name="android:paddingVertical">6dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="shapeAppearance">@null</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textColor">@color/na_btn_text_color_simple</item>
+        <item name="android:background">@drawable/na_bg_btn</item>
+        <item name="rippleColor">@null</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:minHeight">30dp</item>
+    </style>
+
+    <!-- 固定主题色按钮 -->
+    <style name="Widget.Nature.Button.Fix.Blue" parent="Widget.Nature.Button">
+        <item name="android:background">@drawable/na_bg_btn_fix_blue</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <!-- 固定红色按钮 -->
+    <style name="Widget.Nature.Button.Fix.Red" parent="Widget.Nature.Button">
+        <item name="android:background">@drawable/na_bg_btn_fix_red</item>
+        <item name="android:textColor">?colorOnPrimaryRed</item>
+    </style>
+
+    <!-- 固定绿色按钮 -->
+    <style name="Widget.Nature.Button.Fix.Green" parent="Widget.Nature.Button">
+        <item name="android:background">@drawable/na_bg_btn_fix_green</item>
+        <item name="android:textColor">?colorOnPrimaryGreen</item>
+    </style>
+
+    <!-- 固定橙色按钮 -->
+    <style name="Widget.Nature.Button.Fix.Orange" parent="Widget.Nature.Button">
+        <item name="android:background">@drawable/na_bg_btn_fix_orange</item>
+        <item name="android:textColor">?colorOnPrimaryOrange</item>
+    </style>
+
+    <!-- 固定黄色按钮 -->
+    <style name="Widget.Nature.Button.Fix.Yellow" parent="Widget.Nature.Button">
+        <item name="android:background">@drawable/na_bg_btn_fix_yellow</item>
+        <item name="android:textColor">?colorOnPrimaryYellow</item>
+    </style>
+
+    <!-- 小按钮 -->
+    <style name="Widget.Nature.Button.Small">
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">6dp</item>
+        <item name="android:background">@drawable/na_bg_btn_small</item>
+        <item name="android:textAppearance">?textAppearanceLabelLarge</item>
+        <item name="android:minWidth">60dp</item>
+        <item name="android:minHeight">20dp</item>
+    </style>
+</resources>
