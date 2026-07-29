@@ -17,4 +17,7 @@
     <string name="list_func_summary">预制各种样式的列表样式</string>
     <string name="edit_text">输入框</string>
     <string name="edit_func_summary">各种样式输入框</string>
+    <string name="toast">吐司</string>
+    <string name="toast_func_summary">各种样式的吐司提示</string>
+    <string name="toast_with_icon">带图吐司</string>
 </resources>

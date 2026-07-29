@@ -15,6 +15,7 @@ import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityMainBinding
 import com.nathan.widget.app.databinding.ItemFuncBinding
 import com.nathan.widget.app.util.startActivity
+import com.nathan.widget.ui.view.NatureToast
 import com.nathan.widget.util.ScreenUtils
 
 class MainActivity : BaseActivity() {
@@ -35,7 +36,8 @@ class MainActivity : BaseActivity() {
             getString(R.string.dialog) to getString(R.string.dialog_func_summary),
             getString(R.string.smooth_layout) to getString(R.string.smooth_corner_func_summary),
             getString(R.string.list) to getString(R.string.list_func_summary),
-            getString(R.string.edit_text) to getString(R.string.edit_func_summary)
+            getString(R.string.edit_text) to getString(R.string.edit_func_summary),
+            getString(R.string.toast) to getString(R.string.toast_func_summary)
         )
     }
 
@@ -101,7 +103,7 @@ class MainActivity : BaseActivity() {
                 it.context.startActivity(ComponentName(info.packageName, info.name))
             }
             holder.binding.funcItem.setOnTipViewClickListener {
-                Toast.makeText(it.context, "点击Tip", Toast.LENGTH_SHORT).show()
+                NatureToast.makeText(it.context, "点击Tip", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -67,6 +67,14 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+        <activity android:name="com.nathan.widget.app.ToastActivity"
+            android:exported="false"
+            android:label="@string/toast">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

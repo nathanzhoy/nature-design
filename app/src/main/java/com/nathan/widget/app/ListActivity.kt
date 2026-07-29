@@ -15,6 +15,7 @@ import com.nathan.widget.app.databinding.ItemListNumberBinding
 import com.nathan.widget.app.databinding.ItemListSwitchBinding
 import com.nathan.widget.ui.list.NatureListItemView
 import com.nathan.widget.ui.view.NatureButton
+import com.nathan.widget.ui.view.NatureToast
 import com.nathan.widget.util.ScreenUtils
 
 class ListActivity : BaseActivity() {
@@ -116,14 +117,14 @@ class ListActivity : BaseActivity() {
                     val binding = holder.binding as ItemListButtonBinding
                     val button = binding.listView.findViewById<NatureButton>(R.id.button)
                     button.setOnClickListener {
-                        Toast.makeText(it.context, "点击按钮", Toast.LENGTH_SHORT).show()
+                        NatureToast.makeText(it.context, "点击按钮", Toast.LENGTH_SHORT).show()
                     }
                     return
                 }
                 if (model.type == Type.SWITCH) {
                     val binding = holder.binding as ItemListSwitchBinding
                     binding.listView.setToggleChangeListener { it, isCheck ->
-                        Toast.makeText(it.context, "点击开关：$isCheck", Toast.LENGTH_SHORT).show()
+                        NatureToast.makeText(it.context, "点击开关：$isCheck", Toast.LENGTH_SHORT).show()
                     }
                     return
                 }
@@ -146,7 +147,7 @@ class ListActivity : BaseActivity() {
                 if (model.type == Type.FORWARDING) {
                     val binding = holder.binding as ItemListForwardingBinding
                     binding.listView.setOnClickListener {
-                        Toast.makeText(it.context, "点击进入下一页", Toast.LENGTH_SHORT).show()
+                        NatureToast.makeText(it.context, "点击进入下一页", Toast.LENGTH_SHORT).show()
                     }
                     return
                 }

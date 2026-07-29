@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityNatureButtonBinding
+import com.nathan.widget.ui.view.NatureToast
 
 class NatureButtonActivity : BaseActivity() {
 
@@ -13,13 +14,13 @@ class NatureButtonActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         binding.btnSmall.setOnClickListener {
-            Toast.makeText(this, "点击小按钮", Toast.LENGTH_SHORT).show()
+            NatureToast.makeText(this, "点击小按钮", Toast.LENGTH_SHORT).show()
         }
         binding.btnNormal.setOnClickListener {
-            Toast.makeText(this, "点击普通按钮", Toast.LENGTH_SHORT).show()
+            NatureToast.makeText(this, "点击普通按钮", Toast.LENGTH_SHORT).show()
         }
         binding.btnBlue.setOnClickListener {
-            Toast.makeText(this, "点击主题按钮", Toast.LENGTH_SHORT).show()
+            NatureToast.makeText(this, "点击主题按钮", Toast.LENGTH_SHORT).show()
         }
     }
 

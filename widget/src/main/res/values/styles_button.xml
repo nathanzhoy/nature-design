@@ -3,7 +3,7 @@
     <!-- 普通按钮, 只支持简单的文本显示 -->
     <style name="Widget.Nature.Button" parent="Widget.MaterialComponents.Button">
         <item name="elevation">0dp</item>
-        <item name="android:paddingVertical">6dp</item>
+        <item name="android:paddingVertical">8dp</item>
         <item name="android:paddingHorizontal">10dp</item>
         <item name="backgroundTint">@null</item>
         <item name="shapeAppearance">@null</item>
@@ -55,7 +55,7 @@
         <item name="android:paddingHorizontal">6dp</item>
         <item name="android:background">@drawable/na_bg_btn_small</item>
         <item name="android:textAppearance">?textAppearanceLabelLarge</item>
-        <item name="android:minWidth">60dp</item>
+        <item name="android:minWidth">54dp</item>
         <item name="android:minHeight">20dp</item>
     </style>
 </resources>
