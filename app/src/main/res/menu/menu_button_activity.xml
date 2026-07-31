@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_disable" android:title="禁用" app:showAsAction="never" android:icon="@drawable/na_ic_switch" />
+    <item android:id="@+id/menu_enable" android:title="启用" app:showAsAction="never" android:icon="@drawable/na_ic_switch" />
+</menu>

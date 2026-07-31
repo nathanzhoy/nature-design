@@ -9,7 +9,7 @@ import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
 import androidx.recyclerview.widget.RecyclerView
 
-class OverScrollableRecyclerView @JvmOverloads constructor(
+class NatureRecyclerView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defAttr: Int = 0
@@ -32,7 +32,7 @@ class OverScrollableRecyclerView @JvmOverloads constructor(
     }
 
     companion object {
-        private const val TAG = "OverScrollableRecyclerView"
+        private const val TAG = "NatureRecyclerView"
     }
 
     init {

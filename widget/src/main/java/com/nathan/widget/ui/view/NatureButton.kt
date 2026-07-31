@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import com.google.android.material.button.MaterialButton
 import com.nathan.widget.R
 import com.nathan.widget.util.PressAnimUtils
+import com.nathan.widget.util.enable
 
 class NatureButton @JvmOverloads constructor(
     context: Context,

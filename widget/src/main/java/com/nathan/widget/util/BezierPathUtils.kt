@@ -5,10 +5,11 @@ import android.graphics.Path
 object BezierPathUtils {
 
     private const val TAG = "BezierPathUtils"
-    private const val MAX_OFFSET = 0.325F
+    private const val MAX_OFFSET = 0.45F
 
     fun bezierPath(width: Float, height: Float, radius: Float, path: Path) {
-        val offset = (radius / (width.coerceAtMost(height)))/*.coerceAtMost(MAX_OFFSET)*/
+        val offset = (radius / (width.coerceAtMost(height))).coerceAtMost(MAX_OFFSET)
+        LogUtils.i(TAG, "radius: $radius, width: $width, height: $height")
         path.reset()
         path.moveTo(radius, 0f)
         path.lineTo(width - radius, 0f)

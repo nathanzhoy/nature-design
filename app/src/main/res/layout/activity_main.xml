@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.nathan.widget.ui.recyclerview.OverScrollableRecyclerView
+    <com.nathan.widget.ui.recyclerview.NatureRecyclerView
         android:id="@+id/func_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
