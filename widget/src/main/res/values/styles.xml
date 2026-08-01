@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.Nature" parent=""/>
+    <style name="Widget.Nature" parent="" />
 
 
     <style name="Widget.Nature.Icon">
@@ -53,5 +53,13 @@
         <item name="android:background">@drawable/na_bg_edit_text</item>
         <item name="android:maxLines">1</item>
         <item name="showClear">true</item>
+    </style>
+
+    <style name="Widget.Nature.ButtonToggleGroup">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">?marginMini</item>
+        <item name="android:background">@drawable/na_bg_btn_toggle_group</item>
+        <item name="selectionRequired">true</item>
+        <item name="singleSelection">true</item>
     </style>
 </resources>

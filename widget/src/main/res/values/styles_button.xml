@@ -60,4 +60,8 @@
         <item name="android:minWidth">54dp</item>
         <item name="android:minHeight">20dp</item>
     </style>
+
+    <style name="Widget.Nature.Button.Group">
+        <item name="android:background">@drawable/na_bg_btn_group</item>
+    </style>
 </resources>

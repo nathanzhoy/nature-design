@@ -21,4 +21,6 @@
     <string name="toast_func_summary">各种样式的吐司提示</string>
     <string name="toast_with_icon">带图吐司</string>
     <string name="disable_switch">禁用切换</string>
+    <string name="button_group">多项选择器</string>
+    <string name="button_toggle_group_func_summary">单选、多选、文字，图标等样式选择器控件</string>
 </resources>

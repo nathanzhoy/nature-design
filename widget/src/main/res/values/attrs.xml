@@ -54,4 +54,12 @@
         <attr name="android:inputType" />
         <attr name="android:maxLines" />
     </declare-styleable>
+
+    <attr name="natureButtonToggleGroupStyle" format="reference" />
+    <declare-styleable name="NatureButtonToggleGroup">
+        <attr name="singleSelection" />
+        <attr name="selectionRequired" />
+        <attr name="android:enabled" />
+        <attr name="android:checkedButton" />
+    </declare-styleable>
 </resources>

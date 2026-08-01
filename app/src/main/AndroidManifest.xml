@@ -31,6 +31,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.nathan.widget.app.ButtonGroupActivity"
+            android:exported="false"
+            android:label="@string/button_group">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.nathan.widget.app.SmoothLayoutActivity"
             android:exported="false"
             android:label="@string/smooth_layout">
@@ -67,7 +76,8 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
-        <activity android:name="com.nathan.widget.app.ToastActivity"
+        <activity
+            android:name="com.nathan.widget.app.ToastActivity"
             android:exported="false"
             android:label="@string/toast">
             <intent-filter>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 默认单选，可默认选中： android:checkedButton="@id/net_ease"-->
+    <com.nathan.widget.ui.view.NatureButtonToggleGroup
+        android:id="@+id/button_group_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/net_ease"
+        app:layout_constraintBottom_toTopOf="@id/button_group_multi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.nathan.widget.ui.view.NatureButton
+            android:id="@+id/net_ease"
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网易云" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="腾讯音乐" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汽水音乐" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="酷狗" />
+    </com.nathan.widget.ui.view.NatureButtonToggleGroup>
+
+    <!-- 非单选：app:singleSelection="false"  -->
+    <com.nathan.widget.ui.view.NatureButtonToggleGroup
+        android:id="@+id/button_group_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_group_unrequired"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_group_single"
+        app:singleSelection="false">
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小红书" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抖音" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哔哩哔哩" />
+    </com.nathan.widget.ui.view.NatureButtonToggleGroup>
+
+    <!-- 可不选中：app:selectionRequired="false" -->
+    <com.nathan.widget.ui.view.NatureButtonToggleGroup
+        android:id="@+id/button_group_unrequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_disable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_group_multi"
+        app:selectionRequired="false">
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="淘宝" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付宝" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京东" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拼夕夕" />
+    </com.nathan.widget.ui.view.NatureButtonToggleGroup>
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_disable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disable_switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_group_unrequired" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,7 +41,7 @@ class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState
             state.heightCache = height
         }
         val color = state.color
-        if (color != 0 && color != state.paint.color) {
+        if (color != state.paint.color) {
             setColor(color)
         }
         canvas.drawPath(path, cs.paint)
@@ -87,16 +87,18 @@ class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState
     }
 
     private fun reflectResolveAttributes(t: Resources.Theme) {
-        val javaClass = t.javaClass
-        val declaredMethod = javaClass.getDeclaredMethod(
-            "resolveAttributes",
-            IntArray::class.java,
-            IntArray::class.java
-        )
-        declaredMethod.isAccessible = true
         val state = cs
-        val a = declaredMethod.invoke(t, state.attrs, R.styleable.SmoothCornerDrawable) as TypedArray
-        updateStateFromTypedArray(a)
+        if (state.attrs.isNotEmpty()) {
+            val javaClass = t.javaClass
+            val declaredMethod = javaClass.getDeclaredMethod(
+                "resolveAttributes",
+                IntArray::class.java,
+                IntArray::class.java
+            )
+            declaredMethod.isAccessible = true
+            val a = declaredMethod.invoke(t, state.attrs, R.styleable.SmoothCornerDrawable) as TypedArray
+            updateStateFromTypedArray(a)
+        }
     }
 
     override fun inflate(

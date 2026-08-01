@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="na_corner_mini">6dp</dimen>
+    <dimen name="na_corner_mini">8dp</dimen>
     <dimen name="na_corner_small">12dp</dimen>
-    <dimen name="na_corner_medium">18dp</dimen>
-    <dimen name="na_corner_large">24dp</dimen>
-    <dimen name="na_corner_specific">30dp</dimen>
+    <dimen name="na_corner_medium">16dp</dimen>
+    <dimen name="na_corner_large">20dp</dimen>
+    <dimen name="na_corner_specific">24dp</dimen>
 
     <dimen name="na_margin_mini">4dp</dimen>
     <dimen name="na_margin_small">8dp</dimen>
