@@ -5,13 +5,13 @@
 
 
     <style name="Widget.Nature.Icon">
-        <item name="android:layout_width">30dp</item>
-        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
     </style>
     <!-- 通用小图标样式 -->
     <style name="Widget.Nature.Icon.Small">
-        <item name="android:layout_width">25dp</item>
-        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
     </style>
 
     <!-- 平滑圆角布局样式 -->
@@ -61,5 +61,14 @@
         <item name="android:background">@drawable/na_bg_btn_toggle_group</item>
         <item name="selectionRequired">true</item>
         <item name="singleSelection">true</item>
+    </style>
+
+    <style name="Widget.Nature.Switch">
+        <item name="android:thumb">@drawable/na_bg_switch_thumb</item>
+        <item name="track">@drawable/na_bg_switch_tracker</item>
+        <item name="showText">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textOn">@string/lib_name</item>
+        <item name="android:textOff">@string/lib_name</item>
     </style>
 </resources>

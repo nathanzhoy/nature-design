@@ -196,24 +196,22 @@ public class NatureButtonToggleGroup extends LinearLayout {
      * 设置非单选时，item的间距，这个值保持和Padding一致
      */
     private void adjustMarginHorizontal() {
-        if (!singleSelection) {
-            int marginMini = Math.max(getPaddingStart(), getPaddingEnd()) / 2;
-            int count = getChildCount();
-            for (int i = 0; i < count; i++) {
-                View child = getChildAt(i);
-                ViewGroup.LayoutParams layoutParams = child.getLayoutParams();
-                if (layoutParams instanceof MarginLayoutParams) {
-                    if (i == 0) {
-                        ((MarginLayoutParams) layoutParams).setMarginEnd(marginMini);
-                        continue;
-                    }
-                    if (i == count - 1) {
-                        ((MarginLayoutParams) layoutParams).setMarginStart(marginMini);
-                        continue;
-                    }
-                    ((MarginLayoutParams) layoutParams).setMarginStart(marginMini);
+        int marginMini = Math.max(getPaddingStart(), getPaddingEnd()) / 2;
+        int count = getChildCount();
+        for (int i = 0; i < count; i++) {
+            View child = getChildAt(i);
+            ViewGroup.LayoutParams layoutParams = child.getLayoutParams();
+            if (layoutParams instanceof MarginLayoutParams) {
+                if (i == 0) {
                     ((MarginLayoutParams) layoutParams).setMarginEnd(marginMini);
+                    continue;
                 }
+                if (i == count - 1) {
+                    ((MarginLayoutParams) layoutParams).setMarginStart(marginMini);
+                    continue;
+                }
+                ((MarginLayoutParams) layoutParams).setMarginStart(marginMini);
+                ((MarginLayoutParams) layoutParams).setMarginEnd(marginMini);
             }
         }
     }

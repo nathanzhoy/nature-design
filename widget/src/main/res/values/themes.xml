@@ -143,6 +143,8 @@
         <!-- Android -->
         <item name="actionBarSize">64dp</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.Nature.NavigationIcon</item>
+        <item name="switchStyle">@style/Widget.Nature.Switch</item>
+        <item name="android:switchStyle">@style/Widget.Nature.Switch</item>
 
         <item name="android:windowBackground">?colorSurface</item>
     </style>

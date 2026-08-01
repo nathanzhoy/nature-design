@@ -40,8 +40,7 @@
 
     <ImageView
         android:id="@+id/tip"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        style="?natureIconSmall"
         android:layout_marginStart="10dp"
         android:src="@drawable/na_ic_info"
         app:layout_constraintBottom_toBottomOf="@android:id/title"

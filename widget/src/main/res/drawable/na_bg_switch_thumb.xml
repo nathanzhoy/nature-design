@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="?colorSurfaceContainerLow" />
+    <corners android:radius="?cornerSpecific" />
+    <!-- 使用marginSmall 8dp作为描边，因为会除以2，内边距统一是4dp -->
+    <stroke
+        android:width="?marginSmall"
+        android:color="@android:color/transparent" />
+    <size android:width="25dp" android:height="25dp" />
+</shape>

@@ -26,7 +26,7 @@
         android:id="@+id/clear"
         style="?natureIconSmall"
         android:layout_marginHorizontal="?marginMedium"
-        android:src="@drawable/na_ic_close"
+        android:src="@drawable/na_ic_circle_close"
         app:layout_constraintBottom_toBottomOf="@id/edit_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/edit_text"

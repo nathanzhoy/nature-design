@@ -63,5 +63,7 @@
 
     <style name="Widget.Nature.Button.Group">
         <item name="android:background">@drawable/na_bg_btn_group</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/na_btn_text_color</item>
     </style>
 </resources>

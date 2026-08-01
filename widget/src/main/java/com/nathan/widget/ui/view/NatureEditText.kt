@@ -7,8 +7,10 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.withStyledAttributes
+import androidx.core.widget.addTextChangedListener
 import com.nathan.widget.R
 import com.nathan.widget.util.PressAnimUtils
+import com.nathan.widget.util.enable
 import com.nathan.widget.util.visibility
 
 class NatureEditText @JvmOverloads constructor(
@@ -74,6 +76,11 @@ class NatureEditText @JvmOverloads constructor(
             editText.setText("")
         }
         PressAnimUtils(clearView)
+        // Text watcher
+        editText.addTextChangedListener {
+            if (it == null) return@addTextChangedListener
+            clearView.enable(it.isNotEmpty())
+        }
     }
 
     fun setMaxLines(max: Int) {

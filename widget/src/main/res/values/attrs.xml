@@ -55,6 +55,7 @@
         <attr name="android:maxLines" />
     </declare-styleable>
 
+    <!-- ButtonToggleGroup -->
     <attr name="natureButtonToggleGroupStyle" format="reference" />
     <declare-styleable name="NatureButtonToggleGroup">
         <attr name="singleSelection" />
@@ -62,4 +63,8 @@
         <attr name="android:enabled" />
         <attr name="android:checkedButton" />
     </declare-styleable>
+
+    <!-- Switch -->
+    <!--<attr name="natureSwitchStyle" format="reference" />
+    <declare-styleable name=""-->
 </resources>

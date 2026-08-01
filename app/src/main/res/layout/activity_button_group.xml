@@ -57,7 +57,8 @@
             style="@style/Widget.Nature.Button.Group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="微信" />
+            android:text="微信"
+            app:icon="@drawable/na_ic_info" />
 
         <com.nathan.widget.ui.view.NatureButton
             style="@style/Widget.Nature.Button.Group"
@@ -69,7 +70,8 @@
             style="@style/Widget.Nature.Button.Group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="抖音" />
+            android:text="抖音"
+            app:icon="@drawable/na_ic_switch" />
 
         <com.nathan.widget.ui.view.NatureButton
             style="@style/Widget.Nature.Button.Group"
@@ -93,19 +95,21 @@
             style="@style/Widget.Nature.Button.Group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="淘宝" />
-
-        <com.nathan.widget.ui.view.NatureButton
-            style="@style/Widget.Nature.Button.Group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="支付宝" />
 
         <com.nathan.widget.ui.view.NatureButton
             style="@style/Widget.Nature.Button.Group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="京东" />
+            android:text="淘宝"
+            app:icon="@drawable/na_ic_emoji_smile" />
+
+        <com.nathan.widget.ui.view.NatureButton
+            style="@style/Widget.Nature.Button.Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京东"
+            app:icon="@drawable/na_ic_warning" />
 
         <com.nathan.widget.ui.view.NatureButton
             style="@style/Widget.Nature.Button.Group"
