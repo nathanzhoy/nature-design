@@ -25,12 +25,13 @@
 
     <include layout="@layout/na_alert_dialog_title" />
 
-    <FrameLayout
+    <com.nathan.widget.ui.view.NatureSmoothCornerLayout
         android:id="@+id/contentPanel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:minHeight="80dp">
+        android:layout_height="175dp"
+        android:layout_marginTop="?marginSmall"
+        android:minHeight="80dp"
+        android:radius="?cornerSmall">
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scrollView"
@@ -52,19 +53,21 @@
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-    </FrameLayout>
+    </com.nathan.widget.ui.view.NatureSmoothCornerLayout>
 
-    <FrameLayout
+    <com.nathan.widget.ui.view.NatureSmoothCornerLayout
         android:id="@+id/customPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="80dp">
+        android:layout_marginTop="?marginSmall"
+        android:minHeight="80dp"
+        android:radius="?cornerSmall">
 
         <FrameLayout
             android:id="@+id/custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </FrameLayout>
+    </com.nathan.widget.ui.view.NatureSmoothCornerLayout>
 
     <include
         layout="@layout/na_alert_dialog_button_bar"

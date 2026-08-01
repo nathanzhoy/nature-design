@@ -23,4 +23,6 @@
     <string name="disable_switch">Disable Switch</string>
     <string name="button_group">Button Toggle Group</string>
     <string name="button_toggle_group_func_summary">Single, multi, text, icon-only button toggle group</string>
+    <string name="single_list_dialog">Single Dialog</string>
+    <string name="multi_list_dialog">Multi Dialog</string>
 </resources>

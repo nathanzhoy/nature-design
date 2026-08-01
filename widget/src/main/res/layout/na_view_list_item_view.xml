@@ -43,10 +43,12 @@
         style="?natureIconSmall"
         android:layout_marginStart="10dp"
         android:src="@drawable/na_ic_info"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@android:id/title"
         app:layout_constraintStart_toEndOf="@android:id/title"
         app:layout_constraintTop_toTopOf="@android:id/title"
-        app:tint="?colorOnSurfaceVariant" />
+        app:tint="?colorOnSurfaceVariant"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@android:id/summary"

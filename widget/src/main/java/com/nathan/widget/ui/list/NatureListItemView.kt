@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.Checkable
 import android.widget.CompoundButton
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -24,11 +25,15 @@ class NatureListItemView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defAttr: Int = R.attr.natureListItemViewStyle
-) : ConstraintLayout(context, attrs, defAttr) {
+) : ConstraintLayout(context, attrs, defAttr), Checkable {
+
+    companion object {
+        private val CHECKED_STATE_SET = intArrayOf(android.R.attr.state_checked)
+    }
 
     private val inflater = LayoutInflater.from(context)
 
-    private lateinit var avatar: ImageView
+    private lateinit var avatarView: ImageView
     private lateinit var titleView: TextView
     private lateinit var summaryView: TextView
     private lateinit var extraSummaryView: TextView
@@ -36,11 +41,13 @@ class NatureListItemView @JvmOverloads constructor(
     private lateinit var forwardingView: ImageView
     private lateinit var customLayout: FrameLayout
 
+    private var onCheckedChangeListener: OnCheckedChangeListener? = null
     private var mode = Mode.CUSTOM
     private var title = ""
     private var summary = ""
     private var extraSummary = ""
     private var customLayoutRes = 0
+    private var isChecked = false
 
     init {
         PressAnimUtils(this)
@@ -94,8 +101,6 @@ class NatureListItemView @JvmOverloads constructor(
         }
     }
 
-    fun getCustomLayout() = customLayout
-
     private fun setupInitMode() {
         when (mode) {
             Mode.TOGGLE -> {
@@ -127,7 +132,7 @@ class NatureListItemView @JvmOverloads constructor(
     }
 
     private fun setupView() {
-        avatar = findViewById(R.id.avatar)
+        avatarView = findViewById(R.id.avatar)
         titleView = findViewById(android.R.id.title)
         summaryView = findViewById(android.R.id.summary)
         extraSummaryView = findViewById(R.id.extra_summary)
@@ -145,8 +150,8 @@ class NatureListItemView @JvmOverloads constructor(
     }
 
     fun setAvatar(drawable: Drawable?) {
-        avatar.setImageDrawable(drawable)
-        avatar.visibility(drawable != null)
+        avatarView.setImageDrawable(drawable)
+        avatarView.visibility(drawable != null)
         // 增加标题的marginStart
         titleView.apply {
             val params = layoutParams as MarginLayoutParams
@@ -175,6 +180,63 @@ class NatureListItemView @JvmOverloads constructor(
 
     fun setTitle(title: CharSequence) {
         setTitle(title.toString())
+    }
+
+    fun setTip(show: Boolean) {
+        tipView.visibility(show)
+    }
+
+    fun getTipView() = tipView
+
+    fun getTitleView() = titleView
+
+    fun getAvatarView() = avatarView
+
+    fun getSummaryView() = summaryView
+
+    fun getExtraSummaryView() = extraSummaryView
+
+    fun getCustomLayout() = customLayout
+
+    override fun isChecked(): Boolean {
+        return isChecked
+    }
+
+    override fun setChecked(checked: Boolean) {
+        if (isChecked != checked) {
+            isChecked = checked
+            refreshDrawableState()
+            onCheckedChangeListener?.onCheckedChanged(checked)
+        }
+    }
+
+    override fun toggle() {
+        isChecked = isChecked.not()
+    }
+
+    fun setOnCheckedChangeListener(listener: OnCheckedChangeListener) {
+        onCheckedChangeListener = listener
+    }
+
+    override fun onCreateDrawableState(extraSpace: Int): IntArray? {
+        val drawableState = super.onCreateDrawableState(extraSpace + 1)
+        if (isChecked) {
+            mergeDrawableStates(drawableState, CHECKED_STATE_SET)
+        }
+        return drawableState
+    }
+
+
+    /**
+     * 选择监听器, 当添加了相关监听器之后，一旦选择状态发生变化便会通知
+     */
+    interface OnCheckedChangeListener {
+        /**
+         * Checked 状态变化时通知
+         *
+         * @param checked 是否被选中
+         */
+        fun onCheckedChanged(checked: Boolean)
     }
 
     enum class Mode {

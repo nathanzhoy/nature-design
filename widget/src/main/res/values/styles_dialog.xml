@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Widget.Nature.AlertDialog" parent="MaterialAlertDialog.MaterialComponents">
-        <!--<item name="listLayout">@layout/fa_select_dialog_list</item>-->
+        <item name="listLayout">@layout/na_alert_dialog_list</item>
         <item name="android:layout">@layout/na_alert_dialog</item>
-        <item name="android:maxHeight">100dp</item>
-        <!--<item name="multiChoiceItemLayout">@layout/fa_dialog_item_with_check_box</item>
-        <item name="singleChoiceItemLayout">@layout/fa_dialog_item_with_check_text</item>
-        <item name="android:maxHeight">@dimen/fa_dialog_alert_max_height</item>-->
+        <item name="singleChoiceItemLayout">@layout/na_alert_dialog_list_item</item>
+        <item name="multiChoiceItemLayout">@layout/na_alert_dialog_list_item</item>
     </style>
 
     <style name="Widget.Nature.Dialog.Button.Positive" parent="Widget.Nature.Button">
@@ -112,6 +110,7 @@
         <item name="alertDialogStyle">@style/Widget.Nature.AlertDialog</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Nature.Dialog.Button.Positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Nature.Dialog.Button.Negative</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.Nature.CheckedTextView</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="windowMinWidthMajor">50%</item>
         <item name="windowMinWidthMinor">90%</item>

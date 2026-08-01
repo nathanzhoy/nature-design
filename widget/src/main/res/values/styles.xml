@@ -71,4 +71,16 @@
         <item name="android:textOn">@string/lib_name</item>
         <item name="android:textOff">@string/lib_name</item>
     </style>
+
+    <style name="Widget.Nature.CheckedTextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:background">@drawable/na_bg_dialog_list_item</item>
+        <item name="android:paddingVertical">?marginMini</item>
+        <item name="android:paddingHorizontal">?marginMedium</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
+        <item name="android:textColor">@color/na_dialog_list_item_text_color</item>
+        <item name="android:checkMark">@drawable/na_bg_dialog_list_item_check_mark</item>
+        <item name="android:checkMarkTint">?colorPrimary</item>
+    </style>
 </resources>

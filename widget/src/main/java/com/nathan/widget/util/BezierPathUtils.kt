@@ -6,9 +6,14 @@ object BezierPathUtils {
 
     private const val TAG = "BezierPathUtils"
     private const val MAX_OFFSET = 0.45F
+    private const val NORMAL_OFFSET = 0.3F
 
     fun bezierPath(width: Float, height: Float, radius: Float, path: Path) {
-        val offset = (radius / (width.coerceAtMost(height))).coerceAtMost(MAX_OFFSET)
+        val offset = if(radius == width.coerceAtMost(height) / 2) {
+            MAX_OFFSET
+        } else {
+            NORMAL_OFFSET
+        }
         LogUtils.i(TAG, "radius: $radius, width: $width, height: $height")
         path.reset()
         path.moveTo(radius, 0f)

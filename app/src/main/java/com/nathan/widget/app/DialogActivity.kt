@@ -1,11 +1,19 @@
 package com.nathan.widget.app
 
+import android.R.attr.text
 import android.os.Bundle
+import android.widget.Toast
 import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityDialogBinding
 import com.nathan.widget.dialog.AlertDialog
+import com.nathan.widget.ui.view.NatureToast
 
 class DialogActivity : BaseActivity() {
+
+    companion object {
+        private val ITEMS =
+            arrayOf("淘宝", "支付宝", "京东", "拼夕夕", "抖音", "哔哩哔哩", "小红书")
+    }
 
     private lateinit var binding: ActivityDialogBinding
 
@@ -29,6 +37,47 @@ class DialogActivity : BaseActivity() {
                 .setMessage(R.string.test_text_super_long)
                 .setPositiveButton(R.string.confirm) { dialog, which ->
 
+                }.setNegativeButton(R.string.cancel) { dialog, which ->
+
+                }
+                .create()
+                .show()
+        }
+        binding.singleListDialog.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle(R.string.title)
+                .setSingleChoiceItems(ITEMS, 0) { _, which ->
+                    NatureToast.makeText(this, "${ITEMS[which]}被选中", Toast.LENGTH_SHORT).show()
+                }
+                .setPositiveButton(R.string.confirm) { dialog, which ->
+
+                }.setNegativeButton(R.string.cancel) { dialog, which ->
+
+                }
+                .create()
+                .show()
+        }
+        binding.multiListDialog.setOnClickListener {
+            val selected = mutableListOf<String>()
+            AlertDialog.Builder(this)
+                .setTitle(R.string.title)
+                .setMultiChoiceItems(ITEMS, null) { _, which, isChecked ->
+                    val text = ITEMS[which]
+                    NatureToast.makeText(
+                        this,
+                        "${text}被选中：$isChecked",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    if (isChecked) {
+                        selected.add(text)
+                    }
+                }
+                .setPositiveButton(R.string.confirm) { dialog, which ->
+                    NatureToast.makeText(
+                        this,
+                        "你选中了：$selected",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }.setNegativeButton(R.string.cancel) { dialog, which ->
 
                 }
