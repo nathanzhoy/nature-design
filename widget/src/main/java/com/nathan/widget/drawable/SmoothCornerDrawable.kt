@@ -15,19 +15,17 @@ import com.nathan.widget.util.BezierPathUtils
 import org.xmlpull.v1.XmlPullParser
 
 @SuppressLint("PrivateApi")
-class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState()) : Drawable() {
+class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState()) : Drawable() {
 
     companion object {
         private const val TAG = "SmoothCornerDrawable"
     }
 
-    private var paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        style = Paint.Style.FILL
-    }
-    private var path = Path()
+    private val path = Path()
+    private var isMutated = false
 
     override fun draw(canvas: Canvas) {
-        val state = smoothState
+        val state = cs
         val bounds = bounds
         val width = bounds.width().toFloat()
         val height = bounds.height().toFloat()
@@ -37,27 +35,25 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
         val atMost = width.coerceAtMost(height) / 2F
         val effectiveRadius = state.radius.coerceAtMost(atMost)
 
-        if (state.widthCache != width || state.heightCache != height) {
-            BezierPathUtils.bezierPath(
-                width, height, effectiveRadius, path
-            )
+        if (state.widthCache != width || state.heightCache != height || path.isEmpty) {
+            BezierPathUtils.bezierPath(width, height, effectiveRadius, path)
             state.widthCache = width
             state.heightCache = height
         }
-        // Update color
-        if (state.color != 0) {
-            setColor(state.color)
+        val color = state.color
+        if (color != 0 && color != state.paint.color) {
+            setColor(color)
         }
-        canvas.drawPath(path, paint)
+        canvas.drawPath(path, cs.paint)
     }
 
     override fun setAlpha(alpha: Int) {
-        paint.alpha = alpha
+        cs.paint.alpha = alpha
         invalidateSelf()
     }
 
     override fun setColorFilter(colorFilter: ColorFilter?) {
-        paint.colorFilter = colorFilter
+        cs.paint.colorFilter = colorFilter
         invalidateSelf()
     }
 
@@ -65,7 +61,7 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
     override fun getOpacity(): Int = PixelFormat.TRANSLUCENT
 
     fun setColor(color: Int) {
-        paint.color = color
+        cs.paint.color = color
         invalidateSelf()
     }
 
@@ -75,16 +71,15 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
     }
 
     override fun getConstantState(): ConstantState {
-        return smoothState
+        return cs
     }
 
     override fun mutate(): Drawable {
-        smoothState = SmoothState(smoothState)
+        if (isMutated.not() && super.mutate() === this) {
+            cs = SmoothCornerState(cs)
+            isMutated = true
+        }
         return this
-    }
-
-    override fun setChangingConfigurations(configs: Int) {
-        super.setChangingConfigurations(configs)
     }
 
     override fun canApplyTheme(): Boolean {
@@ -99,7 +94,7 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
             IntArray::class.java
         )
         declaredMethod.isAccessible = true
-        val state = smoothState
+        val state = cs
         val a = declaredMethod.invoke(t, state.attrs, R.styleable.SmoothCornerDrawable) as TypedArray
         updateStateFromTypedArray(a)
     }
@@ -124,8 +119,7 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
 
     private fun updateStateFromTypedArray(a: TypedArray) {
         reflectExtractThemeAttrs(a)
-        val state = smoothState
-        state.configurations = state.configurations or a.getChangingConfigurations()
+        val state = cs
         state.radius = a.getDimension(R.styleable.SmoothCornerDrawable_android_radius, state.radius)
         state.color = a.getColor(R.styleable.SmoothCornerDrawable_android_color, state.color)
     }
@@ -134,12 +128,14 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
         val javaClass = typedArray.javaClass
         val declaredMethod = javaClass.getDeclaredMethod("extractThemeAttrs")
         declaredMethod.isAccessible = true
-        smoothState.attrs = declaredMethod.invoke(typedArray) as? IntArray ?: intArrayOf()
+        cs.attrs = declaredMethod.invoke(typedArray) as? IntArray ?: intArrayOf()
     }
 
-    class SmoothState(origin: SmoothState? = null) : ConstantState() {
+    class SmoothCornerState(origin: SmoothCornerState? = null) : ConstantState() {
 
-        var configurations = 0
+        var paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.FILL
+        }
         var attrs = intArrayOf()
         var radius: Float = 0F
         var color: Int = 0
@@ -148,6 +144,7 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
 
         init {
             if (origin != null) {
+                paint = origin.paint
                 attrs = origin.attrs
                 radius = origin.radius
                 color = origin.color
@@ -157,11 +154,11 @@ class SmoothCornerDrawable(private var smoothState: SmoothState = SmoothState())
         }
 
         override fun getChangingConfigurations(): Int {
-            return configurations
+            return 0
         }
 
         override fun newDrawable(): Drawable {
-            return SmoothCornerDrawable(SmoothState(this))
+            return SmoothCornerDrawable(SmoothCornerState(this))
         }
     }
 }
