@@ -6,4 +6,5 @@
     style="@style/Widget.Nature.CheckedTextView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:checkMark="@drawable/na_ic_check_text_mark"
     tools:text="@string/lib_name" />

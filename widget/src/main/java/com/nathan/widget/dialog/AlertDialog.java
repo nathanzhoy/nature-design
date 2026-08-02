@@ -42,8 +42,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
-import androidx.appcompat.R;
 import androidx.appcompat.app.AppCompatDialog;
+
+import com.nathan.widget.R;
 
 /**
  * A subclass of Dialog that can display one, two or three buttons. If you only want to
@@ -93,7 +94,7 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
      * Construct an AlertDialog that uses an explicit theme.  The actual style
      * that an AlertDialog uses is a private implementation, however you can
      * here supply either the name of an attribute in the theme from which
-     * to get the dialog's style (such as {@link R.attr#alertDialogTheme}.
+     * to get the dialog's style (such as {@link androidx.appcompat.R.attr#alertDialogTheme}.
      */
     protected AlertDialog(@NonNull Context context, @StyleRes int themeResId) {
         super(context, resolveDialogTheme(context, themeResId));
@@ -113,7 +114,7 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
             return resid;
         } else {
             TypedValue outValue = new TypedValue();
-            context.getTheme().resolveAttribute(R.attr.alertDialogTheme, outValue, true);
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.alertDialogTheme, outValue, true);
             return outValue.resourceId;
         }
     }
@@ -321,13 +322,13 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
          * The specified theme resource ({@code themeResId}) is applied on top
          * of the parent {@code context}'s theme. It may be specified as a
          * style resource containing a fully-populated theme, such as
-         * {@link R.style#Theme_AppCompat_Dialog}, to replace all
+         * {@link androidx.appcompat.R.style#Theme_AppCompat_Dialog}, to replace all
          * attributes in the parent {@code context}'s theme including primary
          * and accent colors.
          * <p>
          * To preserve attributes such as primary and accent colors, the
          * {@code themeResId} may instead be specified as an overlay theme such
-         * as {@link R.style#ThemeOverlay_AppCompat_Dialog}. This will
+         * as {@link androidx.appcompat.R.style#ThemeOverlay_AppCompat_Dialog}. This will
          * override only the window attributes necessary to style the alert
          * window as a dialog.
          * <p>
@@ -429,6 +430,18 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
          */
         public AlertDialog.Builder setIcon(@DrawableRes int iconId) {
             P.mIconId = iconId;
+            return this;
+        }
+
+        /**
+         * Added by nature design for icon to make a close func
+         * @param listener close icon click callback
+         * @return builder
+         */
+        public AlertDialog.Builder setOnCloseIconClickListener(OnClickListener listener) {
+            // 设置关闭图标
+            P.mIconId = R.drawable.na_ic_close;
+            P.mIconButtonListener = listener;
             return this;
         }
 

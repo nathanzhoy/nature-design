@@ -23,7 +23,6 @@ import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
@@ -39,7 +38,6 @@ import android.view.ViewParent;
 import android.view.ViewStub;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -58,8 +56,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.R;
 import androidx.appcompat.app.AppCompatDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.core.view.ViewCompat;
 import androidx.core.widget.NestedScrollView;
+
+import com.nathan.widget.util.PressAnimUtils;
 
 import java.lang.ref.WeakReference;
 
@@ -101,8 +100,9 @@ class AlertController {
 
     private int mIconId = 0;
     private Drawable mIcon;
-
     private ImageView mIconView;
+    Message mButtonIconMessage;
+
     private TextView mTitleView;
     private TextView mMessageView;
     private View mCustomTitleView;
@@ -134,6 +134,8 @@ class AlertController {
                 m = Message.obtain(mButtonNegativeMessage);
             } else if (v == mButtonNeutral && mButtonNeutralMessage != null) {
                 m = Message.obtain(mButtonNeutralMessage);
+            } else if (v == mIconView && mButtonIconMessage != null) {
+                m = Message.obtain(mButtonIconMessage);
             } else {
                 m = null;
             }
@@ -165,6 +167,7 @@ class AlertController {
                 case DialogInterface.BUTTON_POSITIVE:
                 case DialogInterface.BUTTON_NEGATIVE:
                 case DialogInterface.BUTTON_NEUTRAL:
+                case android.R.id.icon:
                     ((DialogInterface.OnClickListener) msg.obj).onClick(mDialog.get(), msg.what);
                     break;
 
@@ -397,6 +400,16 @@ class AlertController {
     }
 
     /**
+     * Added by nature design for icon to make a close func
+     * @param listener close icon click callback
+     */
+    public void setOnCloseIconClickListener(DialogInterface.OnClickListener listener) {
+        if (listener != null) {
+            mButtonIconMessage = mHandler.obtainMessage(android.R.id.icon, listener);
+        }
+    }
+
+    /**
      * @param attrId the attributeId of the theme-specific drawable
      *               to resolve the resourceId for.
      *
@@ -598,6 +611,8 @@ class AlertController {
             titleTemplate.setVisibility(View.GONE);
         } else {
             mIconView = (ImageView) mWindow.findViewById(android.R.id.icon);
+            mIconView.setOnClickListener(mButtonHandler);
+            new PressAnimUtils(mIconView);
 
             final boolean hasTextTitle = !TextUtils.isEmpty(mTitle);
             if (hasTextTitle && mShowTitle) {
@@ -784,6 +799,8 @@ class AlertController {
 
         public int mIconId = 0;
         public Drawable mIcon;
+        // Added by nature design
+        public DialogInterface.OnClickListener mIconButtonListener;
         public int mIconAttrId = 0;
         public CharSequence mTitle;
         public View mCustomTitleView;
@@ -858,6 +875,10 @@ class AlertController {
                 }
                 if (mIconAttrId != 0) {
                     dialog.setIcon(dialog.getIconAttributeResId(mIconAttrId));
+                }
+                // 设置关闭按钮监听
+                if (mIconButtonListener != null) {
+                    dialog.setOnCloseIconClickListener(mIconButtonListener);
                 }
             }
             if (mMessage != null) {

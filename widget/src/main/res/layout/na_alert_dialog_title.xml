@@ -32,9 +32,8 @@
 
         <ImageView
             android:id="@android:id/icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="8dp"
+            style="?natureIconSmall"
+            android:layout_marginEnd="?marginSmall"
             android:scaleType="fitCenter"
             android:src="@null" />
 
@@ -45,7 +44,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
-            android:textAppearance="?textAppearanceTitleMedium"
+            android:textAppearance="?textAppearanceBodyLarge"
             android:textColor="?colorOnSurface"
             tools:text="@string/lib_name" />
     </LinearLayout>

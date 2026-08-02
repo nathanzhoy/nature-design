@@ -9,7 +9,7 @@ import android.view.View
 import android.view.animation.DecelerateInterpolator
 
 @SuppressLint("ClickableViewAccessibility")
-class PressAnimUtils(
+class PressAnimUtils @JvmOverloads constructor(
     private val view: View,
     private val scaleRatio: Float = 0.95F,
     private val duration: Long = 200L

@@ -46,6 +46,10 @@ class DialogActivity : BaseActivity() {
         binding.singleListDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle(R.string.title)
+                // 设置关闭图点击监听，设置后图标才会显示
+                .setOnCloseIconClickListener { _, which ->
+                    NatureToast.makeText(this, "点击关闭图标", Toast.LENGTH_SHORT).show()
+                }
                 .setSingleChoiceItems(ITEMS, 0) { _, which ->
                     NatureToast.makeText(this, "${ITEMS[which]}被选中", Toast.LENGTH_SHORT).show()
                 }

@@ -21,7 +21,7 @@
     android:background="@drawable/na_bg_dialog"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="18dp">
+    android:padding="?marginSpecific">
 
     <include layout="@layout/na_alert_dialog_title" />
 

@@ -118,7 +118,7 @@
         <item name="android:windowMinWidthMinor">90%</item>
         <!--<item name="windowFixedHeightMajor">40%</item>
         <item name="windowFixedHeightMinor">50%</item>-->
-        <item name="dialogPreferredPadding">18dp</item>
+        <item name="dialogPreferredPadding">?marginSpecific</item>
         <item name="android:backgroundDimAmount">0.5</item>
     </style>
 
