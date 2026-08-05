@@ -38,7 +38,8 @@ class MainActivity : BaseActivity() {
             getString(R.string.list) to getString(R.string.list_func_summary),
             getString(R.string.edit_text) to getString(R.string.edit_func_summary),
             getString(R.string.toast) to getString(R.string.toast_func_summary),
-            getString(R.string.button_group) to getString(R.string.button_toggle_group_func_summary)
+            getString(R.string.button_group) to getString(R.string.button_toggle_group_func_summary),
+            getString(R.string.seek_bar) to getString(R.string.seek_bar_func_summary)
         )
     }
 

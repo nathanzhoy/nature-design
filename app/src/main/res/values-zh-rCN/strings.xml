@@ -25,4 +25,6 @@
     <string name="button_toggle_group_func_summary">单选、多选、文字，图标等样式选择器控件</string>
     <string name="single_list_dialog">单项选择弹窗</string>
     <string name="multi_list_dialog">多项选择弹窗</string>
+    <string name="seek_bar">拖动条</string>
+    <string name="seek_bar_func_summary">进度条、拖动条</string>
 </resources>

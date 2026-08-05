@@ -22,7 +22,7 @@
         </activity>
 
         <activity
-            android:name="com.nathan.widget.app.NatureButtonActivity"
+            android:name="com.nathan.widget.app.ButtonActivity"
             android:exported="false"
             android:label="@string/button">
             <intent-filter>
@@ -80,6 +80,15 @@
             android:name="com.nathan.widget.app.ToastActivity"
             android:exported="false"
             android:label="@string/toast">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nathan.widget.app.SeekBarActivity"
+            android:exported="false"
+            android:label="@string/seek_bar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />

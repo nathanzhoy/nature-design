@@ -35,10 +35,10 @@ class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState
         val atMost = width.coerceAtMost(height) / 2F
         val effectiveRadius = state.radius.coerceAtMost(atMost)
 
-        if (state.widthCache != width || state.heightCache != height || path.isEmpty) {
+        if (state.width != width || state.height != height || path.isEmpty) {
             BezierPathUtils.bezierPath(width, height, effectiveRadius, path)
-            state.widthCache = width
-            state.heightCache = height
+            state.width = width
+            state.height = height
         }
         val color = state.color
         if (color != state.paint.color) {
@@ -141,8 +141,8 @@ class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState
         var attrs = intArrayOf()
         var radius: Float = 0F
         var color: Int = 0
-        var widthCache: Float = 0F
-        var heightCache: Float = 0F
+        var width: Float = 0F
+        var height: Float = 0F
 
         init {
             if (origin != null) {
@@ -150,8 +150,8 @@ class SmoothCornerDrawable(private var cs: SmoothCornerState = SmoothCornerState
                 attrs = origin.attrs
                 radius = origin.radius
                 color = origin.color
-                widthCache = origin.widthCache
-                heightCache = origin.heightCache
+                width = origin.width
+                height = origin.height
             }
         }
 

@@ -32,20 +32,27 @@
 
         <ImageView
             android:id="@android:id/icon"
-            style="?natureIconSmall"
-            android:layout_marginEnd="?marginSmall"
+            style="?natureIcon"
             android:scaleType="fitCenter"
             android:src="@null" />
 
         <TextView
             android:id="@+id/alertTitle"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="?marginSmall"
+            android:layout_weight="1"
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
             android:textAppearance="?textAppearanceBodyLarge"
             android:textColor="?colorOnSurface"
             tools:text="@string/lib_name" />
+
+        <ImageView
+            android:id="@android:id/icon1"
+            style="?natureIcon"
+            android:scaleType="fitCenter"
+            android:src="@null" />
     </LinearLayout>
 </LinearLayout>

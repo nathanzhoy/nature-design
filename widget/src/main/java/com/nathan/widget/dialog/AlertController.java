@@ -924,6 +924,56 @@ class AlertController {
         private void createListView(final AlertController dialog) {
             final RecycleListView listView =
                     (RecycleListView) mInflater.inflate(dialog.mListLayout, null);
+            listView.setSelector(android.R.color.transparent);
+            final ListAdapter adapter = getListAdapter(dialog, listView);
+
+            if (mOnPrepareListViewListener != null) {
+                mOnPrepareListViewListener.onPrepareListView(listView);
+            }
+
+            /* Don't directly set the adapter on the ListView as we might
+             * want to add a footer to the ListView later.
+             */
+            dialog.mAdapter = adapter;
+            dialog.mCheckedItem = mCheckedItem;
+
+            if (mOnClickListener != null) {
+                listView.setOnItemClickListener(new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        mOnClickListener.onClick(dialog.mDialog, position);
+                        if (!mIsSingleChoice) {
+                            dialog.mDialog.dismiss();
+                        }
+                    }
+                });
+            } else if (mOnCheckboxClickListener != null) {
+                listView.setOnItemClickListener(new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        if (mCheckedItems != null) {
+                            mCheckedItems[position] = listView.isItemChecked(position);
+                        }
+                        mOnCheckboxClickListener.onClick(
+                                dialog.mDialog, position, listView.isItemChecked(position));
+                    }
+                });
+            }
+
+            // Attach a given OnItemSelectedListener to the ListView
+            if (mOnItemSelectedListener != null) {
+                listView.setOnItemSelectedListener(mOnItemSelectedListener);
+            }
+
+            if (mIsSingleChoice) {
+                listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+            } else if (mIsMultiChoice) {
+                listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+            }
+            dialog.mListView = listView;
+        }
+
+        private ListAdapter getListAdapter(AlertController dialog, RecycleListView listView) {
             final ListAdapter adapter;
 
             if (mIsMultiChoice) {
@@ -987,51 +1037,7 @@ class AlertController {
                     adapter = new CheckedItemAdapter(mContext, layout, android.R.id.text1, mItems);
                 }
             }
-
-            if (mOnPrepareListViewListener != null) {
-                mOnPrepareListViewListener.onPrepareListView(listView);
-            }
-
-            /* Don't directly set the adapter on the ListView as we might
-             * want to add a footer to the ListView later.
-             */
-            dialog.mAdapter = adapter;
-            dialog.mCheckedItem = mCheckedItem;
-
-            if (mOnClickListener != null) {
-                listView.setOnItemClickListener(new OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                        mOnClickListener.onClick(dialog.mDialog, position);
-                        if (!mIsSingleChoice) {
-                            dialog.mDialog.dismiss();
-                        }
-                    }
-                });
-            } else if (mOnCheckboxClickListener != null) {
-                listView.setOnItemClickListener(new OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                        if (mCheckedItems != null) {
-                            mCheckedItems[position] = listView.isItemChecked(position);
-                        }
-                        mOnCheckboxClickListener.onClick(
-                                dialog.mDialog, position, listView.isItemChecked(position));
-                    }
-                });
-            }
-
-            // Attach a given OnItemSelectedListener to the ListView
-            if (mOnItemSelectedListener != null) {
-                listView.setOnItemSelectedListener(mOnItemSelectedListener);
-            }
-
-            if (mIsSingleChoice) {
-                listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-            } else if (mIsMultiChoice) {
-                listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-            }
-            dialog.mListView = listView;
+            return adapter;
         }
     }
 

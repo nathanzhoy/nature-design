@@ -83,4 +83,13 @@
         <item name="android:checkMark">@drawable/na_bg_dialog_list_item_check_mark</item>
         <item name="android:checkMarkTint">?colorPrimary</item>
     </style>
+
+    <style name="Widget.Nature.SeekBar">
+        <item name="android:minHeight">20dp</item>
+        <item name="android:enabled">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">?marginMini</item>
+        <item name="android:background">@drawable/na_bg_seek_bar</item>
+        <item name="android:progressDrawable">@drawable/na_bg_seek_bar_progress</item>
+    </style>
 </resources>

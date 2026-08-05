@@ -110,7 +110,6 @@
         <item name="alertDialogStyle">@style/Widget.Nature.AlertDialog</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Nature.Dialog.Button.Positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Nature.Dialog.Button.Negative</item>
-        <item name="android:checkedTextViewStyle">@style/Widget.Nature.CheckedTextView</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="windowMinWidthMajor">50%</item>
         <item name="windowMinWidthMinor">90%</item>

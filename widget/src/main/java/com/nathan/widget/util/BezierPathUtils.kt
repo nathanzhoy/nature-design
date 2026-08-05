@@ -16,9 +16,9 @@ object BezierPathUtils {
         }
         LogUtils.i(TAG, "radius: $radius, width: $width, height: $height")
         path.reset()
-        path.moveTo(radius, 0f)
-        path.lineTo(width - radius, 0f)
-        path.cubicTo(width - radius * offset, 0f, width, radius * offset, width, radius)
+        path.moveTo(radius, 0F)
+        path.lineTo(width - radius, 0F)
+        path.cubicTo(width - radius * offset, 0F, width, radius * offset, width, radius)
         path.lineTo(width, height - radius)
         path.cubicTo(
             width,
@@ -29,9 +29,9 @@ object BezierPathUtils {
             height
         )
         path.lineTo(radius, height)
-        path.cubicTo(radius * offset, height, 0f, height - radius * offset, 0f, height - radius)
-        path.lineTo(0f, radius)
-        path.cubicTo(0f, radius * offset, radius * offset, 0f, radius, 0f)
+        path.cubicTo(radius * offset, height, 0F, height - radius * offset, 0F, height - radius)
+        path.lineTo(0F, radius)
+        path.cubicTo(0F, radius * offset, radius * offset, 0F, radius, 0F)
         path.close()
     }
 }

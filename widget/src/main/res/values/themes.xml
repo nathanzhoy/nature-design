@@ -145,6 +145,8 @@
         <item name="toolbarNavigationButtonStyle">@style/Widget.Nature.NavigationIcon</item>
         <item name="switchStyle">@style/Widget.Nature.Switch</item>
         <item name="android:switchStyle">@style/Widget.Nature.Switch</item>
+        <item name="seekBarStyle">@style/Widget.Nature.SeekBar</item>
+        <item name="android:seekBarStyle">@style/Widget.Nature.SeekBar</item>
 
         <item name="android:windowBackground">?colorSurface</item>
     </style>
