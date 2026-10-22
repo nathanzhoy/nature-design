@@ -27,4 +27,6 @@
     <string name="multi_list_dialog">Multi Dialog</string>
     <string name="seek_bar">SeekBar</string>
     <string name="seek_bar_func_summary">SeekBar, ProgressBar</string>
+    <string name="night_mode_theme">Night Theme</string>
+    <string name="night_mode_theme_func_summary">Show the night theme in an actual day theme</string>
 </resources>

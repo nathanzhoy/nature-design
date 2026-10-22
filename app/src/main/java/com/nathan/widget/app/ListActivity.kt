@@ -124,7 +124,8 @@ class ListActivity : BaseActivity() {
                 if (model.type == Type.SWITCH) {
                     val binding = holder.binding as ItemListSwitchBinding
                     binding.listView.setToggleChangeListener { it, isCheck ->
-                        NatureToast.makeText(it.context, "点击开关：$isCheck", Toast.LENGTH_SHORT).show()
+                        NatureToast.makeText(it.context, "点击开关：$isCheck", Toast.LENGTH_SHORT)
+                            .show()
                     }
                     return
                 }
@@ -147,7 +148,8 @@ class ListActivity : BaseActivity() {
                 if (model.type == Type.FORWARDING) {
                     val binding = holder.binding as ItemListForwardingBinding
                     binding.listView.setOnClickListener {
-                        NatureToast.makeText(it.context, "点击进入下一页", Toast.LENGTH_SHORT).show()
+                        NatureToast.makeText(it.context, "点击进入下一页", Toast.LENGTH_SHORT)
+                            .show()
                     }
                     return
                 }
@@ -174,11 +176,35 @@ class ListActivity : BaseActivity() {
                     Type.FORWARDING
                 )
             )
-            add(ListItemModel(R.drawable.ic_demo, "开关Toggle", "预设开关布局", "警告", Type.SWITCH))
+            add(
+                ListItemModel(
+                    R.drawable.ic_demo,
+                    "开关Toggle",
+                    "预设开关布局",
+                    "警告",
+                    Type.SWITCH
+                )
+            )
             add(ListItemModel(R.drawable.ic_demo, "点Dot", "预设提示布局", "警告", Type.DOT))
-            add(ListItemModel(R.drawable.ic_demo, "数字Number", "预设数字布局", "警告", Type.NUMBER))
+            add(
+                ListItemModel(
+                    R.drawable.ic_demo,
+                    "数字Number",
+                    "预设数字布局",
+                    "警告",
+                    Type.NUMBER
+                )
+            )
 
-            add(ListItemModel(R.drawable.ic_demo, "按钮Custom", "自定义按钮布局", "警告", Type.BUTTON))
+            add(
+                ListItemModel(
+                    R.drawable.ic_demo,
+                    "按钮Custom",
+                    "自定义按钮布局",
+                    "警告",
+                    Type.BUTTON
+                )
+            )
         }
     }
 

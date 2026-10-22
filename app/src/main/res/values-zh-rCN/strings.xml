@@ -27,4 +27,6 @@
     <string name="multi_list_dialog">多项选择弹窗</string>
     <string name="seek_bar">拖动条</string>
     <string name="seek_bar_func_summary">进度条、拖动条</string>
+    <string name="night_mode_theme">夜间主题</string>
+    <string name="night_mode_theme_func_summary">在日间主题中单独显示夜间主题</string>
 </resources>

@@ -94,6 +94,17 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.nathan.widget.app.NightModeListActivity"
+            android:exported="false"
+            android:label="@string/night_mode_theme"
+            android:theme="@style/Theme.Nature.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

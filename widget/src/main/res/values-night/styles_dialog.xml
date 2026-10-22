@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 夜间模式使用Dark主题 -->
+    <style name="Theme.Nature.Dialog.DayNight" parent="Theme.Nature.Dialog.Dark" />
+</resources>

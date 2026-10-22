@@ -86,4 +86,76 @@
     <color name="na_on_primary_orange">#FFFFFF</color>
     <color name="na_primary_container_orange">#26FA5700</color>
     <color name="na_on_primary_container_orange">#FA5700</color>
+
+    <!-- 夜间颜色 -->
+
+    <!-- Primary -->
+    <color name="na_primary_dark">#1368FB</color>
+    <color name="na_primary_container_dark">#260088FF</color>
+    <color name="na_on_primary_dark">#E6FFFFFF</color>
+    <color name="na_on_primary_container_dark">#0088FF</color>
+
+    <!-- Secondary -->
+    <color name="na_secondary_dark">#CCC2DC</color>
+    <color name="na_secondary_container_dark">#4A4458</color>
+    <color name="na_on_secondary_dark">#1D192B</color>
+    <color name="na_on_secondary_container_dark">#E8DEF8</color>
+
+    <!-- Tertiary -->
+    <color name="na_tertiary_dark">#EFB8C8</color>
+    <color name="na_tertiary_container_dark">#633B48</color>
+    <color name="na_on_tertiary_dark">#31111D</color>
+    <color name="na_on_tertiary_container_dark">#FFD8E4</color>
+
+    <!-- Error -->
+    <color name="na_error_dark">#F2B8B5</color>
+    <color name="na_error_container_dark">#8C1D18</color>
+    <color name="na_on_error_dark">#601410</color>
+    <color name="na_on_error_container_dark">#F9DEDC</color>
+
+    <!-- Fixed -->
+    <color name="na_primary_fixed_dark">#EADDFF</color>
+    <color name="na_primary_fixed_dim_dark">#D0BCFF</color>
+    <color name="na_secondary_fixed_dark">#E8DEF8</color>
+    <color name="na_secondary_fixed_dim_dark">#CCC2DC</color>
+    <color name="na_tertiary_fixed_dark">#FFD8E4</color>
+    <color name="na_tertiary_fixed_dim_dark">#EFB8C8</color>
+
+    <!-- On Fixed -->
+    <color name="na_on_primary_fixed_dark">#21005D</color>
+    <color name="na_on_secondary_fixed_dark">#1D192B</color>
+    <color name="na_on_tertiary_fixed_dark">#31111D</color>
+    <color name="na_on_primary_fixed_variant_dark">#381E72</color>
+    <color name="na_on_secondary_fixed_variant_dark">#4A4458</color>
+    <color name="na_on_tertiary_fixed_variant_dark">#633B48</color>
+
+    <!-- Surface -->
+    <color name="na_surface_dim_dark">#3C444D</color>
+    <color name="na_surface_dark">#24282E</color>
+    <color name="na_surface_bright_dark">#121212</color>
+    <color name="na_surface_container_dark">#30363E</color>
+    <color name="na_surface_container_low_dark">#3C444D</color>
+    <color name="na_surface_container_high_dark">#992E343B</color>
+    <color name="na_surface_container_highest_dark">#9969747F</color>
+
+    <!-- Inverse -->
+    <color name="na_inverse_surface_dark">#E6E0E9</color>
+    <color name="na_inverse_on_surface_dark">#322F35</color>
+    <color name="na_inverse_primary_dark">#6750A4</color>
+
+    <!-- On Surface -->
+    <color name="na_on_surface_dark">#E6FFFFFF</color>
+    <color name="na_on_surface_variant_dark">#80FFFFFF</color>
+
+    <!-- Outline -->
+    <color name="na_outline_dark">#938F99</color>
+    <color name="na_outline_variant_dark">#49454F</color>
+
+    <!-- Misc -->
+    <color name="na_scrim_dark">#000000</color>
+    <color name="na_shadow_dark">#000000</color>
+
+    <!-- Lowest / Highest -->
+    <color name="na_lowest_dark">#141218</color>
+    <color name="na_highest_dark">#36343B</color>
 </resources>

@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Nature.DayNight" parent="Base.Theme.Nature">
 
+    <!-- 夜间模式使用Dark主题 -->
+    <style name="Theme.Nature.DayNight" parent="Theme.Nature.Dark">
     </style>
 </resources>

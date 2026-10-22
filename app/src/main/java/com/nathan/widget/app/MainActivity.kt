@@ -20,6 +20,10 @@ import com.nathan.widget.util.ScreenUtils
 
 class MainActivity : BaseActivity() {
 
+    companion object {
+        private const val CATEGORY_SUFFIX = ".category.UI_PAGE_SCOPE"
+    }
+
     private var funcMap = mapOf<String, String>()
 
     private lateinit var binding: ActivityMainBinding
@@ -39,13 +43,14 @@ class MainActivity : BaseActivity() {
             getString(R.string.edit_text) to getString(R.string.edit_func_summary),
             getString(R.string.toast) to getString(R.string.toast_func_summary),
             getString(R.string.button_group) to getString(R.string.button_toggle_group_func_summary),
-            getString(R.string.seek_bar) to getString(R.string.seek_bar_func_summary)
+            getString(R.string.seek_bar) to getString(R.string.seek_bar_func_summary),
+            getString(R.string.night_mode_theme) to getString(R.string.night_mode_theme_func_summary)
         )
     }
 
     private fun setupRecyclerView() {
         val intent = Intent(Intent.ACTION_MAIN).apply {
-            addCategory("${packageName}.category.UI_PAGE_SCOPE")
+            addCategory("${packageName}$CATEGORY_SUFFIX")
         }
         val data = packageManager.queryIntentActivities(intent, PackageManager.GET_META_DATA)
         if (data.isNotEmpty()) {
