@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角dp -->
+    <dimen name="na_corner_mini">@dimen/na_common_dp_8</dimen>
+    <dimen name="na_corner_small">@dimen/na_common_dp_12</dimen>
+    <dimen name="na_corner_medium">@dimen/na_common_dp_16</dimen>
+    <dimen name="na_corner_large">@dimen/na_common_dp_20</dimen>
+    <dimen name="na_corner_specific">@dimen/na_common_dp_24</dimen>
+
+    <!-- 边距dp -->
+    <dimen name="na_margin_mini">@dimen/na_common_dp_4</dimen>
+    <dimen name="na_margin_small">@dimen/na_common_dp_8</dimen>
+    <dimen name="na_margin_medium">@dimen/na_common_dp_12</dimen>
+    <dimen name="na_margin_large">@dimen/na_common_dp_16</dimen>
+    <dimen name="na_margin_specific">@dimen/na_common_dp_20</dimen>
+</resources>

@@ -6,67 +6,67 @@
 
     <!-- ==================== Display ==================== -->
     <style name="TextAppearance.Nature.DisplayLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">70sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_50</item>
     </style>
 
     <style name="TextAppearance.Nature.DisplayMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">66sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_46</item>
     </style>
 
     <style name="TextAppearance.Nature.DisplaySmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">62sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_42</item>
     </style>
 
     <!-- ==================== Headline ==================== -->
     <style name="TextAppearance.Nature.HeadlineLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">58sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_38</item>
     </style>
 
     <style name="TextAppearance.Nature.HeadlineMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">52sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_34</item>
     </style>
 
     <style name="TextAppearance.Nature.HeadlineSmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">44sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_30</item>
     </style>
 
     <!-- ==================== Title ==================== -->
     <style name="TextAppearance.Nature.TitleLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_26</item>
     </style>
 
     <style name="TextAppearance.Nature.TitleMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_24</item>
     </style>
 
     <style name="TextAppearance.Nature.TitleSmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_22</item>
     </style>
 
     <!-- ==================== Body ==================== -->
     <style name="TextAppearance.Nature.BodyLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_20</item>
     </style>
 
     <style name="TextAppearance.Nature.BodyMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_18</item>
     </style>
 
     <style name="TextAppearance.Nature.BodySmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_16</item>
     </style>
 
     <!-- ==================== Label ==================== -->
     <!-- Label Large 常用于按钮文字 -->
     <style name="TextAppearance.Nature.LabelLarge" parent="TextAppearance.Nature">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_14</item>
     </style>
 
     <style name="TextAppearance.Nature.LabelMedium" parent="TextAppearance.Nature">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_12</item>
     </style>
 
     <style name="TextAppearance.Nature.LabelSmall" parent="TextAppearance.Nature">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">@dimen/na_common_sp_10</item>
     </style>
 </resources>
