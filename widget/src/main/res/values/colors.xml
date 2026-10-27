@@ -41,7 +41,7 @@
 
     <!-- Surface -->
     <color name="na_surface_dim">#FFFFFF</color>
-    <color name="na_surface">#F7F7F8</color>
+    <color name="na_surface">#F4F4F4</color>
     <color name="na_surface_bright">#CCD5E0</color>
     <color name="na_surface_container">#E3E3E3</color>
     <color name="na_surface_container_low">#FFFFFF</color>
@@ -134,7 +134,7 @@
     <color name="na_surface_dark">#24282E</color>
     <color name="na_surface_bright_dark">#121212</color>
     <color name="na_surface_container_dark">#30363E</color>
-    <color name="na_surface_container_low_dark">#3C444D</color>
+    <color name="na_surface_container_low_dark">#3E444C</color>
     <color name="na_surface_container_high_dark">#992E343B</color>
     <color name="na_surface_container_highest_dark">#9969747F</color>
 
