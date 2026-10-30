@@ -7,17 +7,27 @@
         <item name="multiChoiceItemLayout">@layout/na_alert_dialog_list_item</item>
     </style>
 
+    <!-- 确定按钮 -->
     <style name="Widget.Nature.Dialog.Button.Positive" parent="Widget.Nature.Button">
         <item name="android:background">@drawable/na_bg_dialog_btn_positive</item>
         <item name="android:textColor">?colorOnPrimary</item>
         <item name="android:textAppearance">?textAppearanceBodyLarge</item>
     </style>
-    <style name="Widget.Nature.Dialog.Button.Negative" parent="Widget.Nature.Button">
+
+    <!-- 危险按钮 -->
+    <style name="Widget.Nature.Dialog.Button.Positive.Danger">
+        <item name="android:background">@drawable/na_bg_dialog_btn_positive_danger</item>
+
+    </style>
+
+    <!-- 取消按钮 -->
+    <style name="Widget.Nature.Dialog.Button.Negative" parent="Widget.Nature.Dialog.Button.Positive">
         <item name="android:background">@drawable/na_bg_dialog_btn_negative</item>
-        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
+        <item name="android:textColor">?colorOnSurface</item>
     </style>
 
 
+    <!-- 弹窗样式 -->
     <style name="Theme.Nature.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
         <!-- Primary -->
         <item name="colorPrimary">@color/na_primary</item>
@@ -109,6 +119,7 @@
         <!-- alertDialogStyle以及button，因为被AlertDialog类wrapper过，导致Theme层alertDialogStyle失效，统一放这里 -->
         <item name="alertDialogStyle">@style/Widget.Nature.AlertDialog</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Nature.Dialog.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Nature.Dialog.Button.Positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Nature.Dialog.Button.Negative</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="windowMinWidthMajor">50%</item>
@@ -199,7 +210,7 @@
 
     <style name="Theme.Nature.Dialog.DayNight" parent="Theme.Nature.Dialog.Light" />
 
-    <style name="Theme.Nature.Dialog.Alert" parent="Theme.Nature.Dialog.DayNight">
-
+    <style name="Theme.Nature.Dialog.Danger" parent="Theme.Nature.Dialog.DayNight">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Nature.Dialog.Button.Positive.Danger</item>
     </style>
 </resources>

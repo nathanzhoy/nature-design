@@ -23,10 +23,12 @@ import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -59,10 +61,15 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.widget.NestedScrollView;
 
 import com.nathan.widget.util.PressAnimUtils;
+import com.nathan.widget.util.ViewExtensionKt;
 
 import java.lang.ref.WeakReference;
 
 class AlertController {
+
+    private static final String TAG = "AlertController";
+    private static final long COUNT_DOWN_DURATION = 1000L;
+
     private final Context mContext;
     final AppCompatDialog mDialog;
     private final Window mWindow;
@@ -119,6 +126,7 @@ class AlertController {
     int mListItemLayout;
 
     private boolean mShowTitle;
+    private CountDownTimer mCountDownTimer;
 
     private int mButtonPanelLayoutHint = AlertDialog.LAYOUT_HINT_NONE;
 
@@ -375,7 +383,8 @@ class AlertController {
                 mIconView.setVisibility(View.VISIBLE);
                 mIconView.setImageResource(mIconId);
             } else {
-                mIconView.setVisibility(View.GONE);
+                // 占位，保证title居中
+                mIconView.setVisibility(View.INVISIBLE);
             }
         }
     }
@@ -507,6 +516,7 @@ class AlertController {
         setupContent(contentPanel);
         setupButtons(buttonPanel);
         setupTitle(topPanel);
+        setupCountDownMillis();
 
         final boolean hasCustomPanel = customPanel != null
                 && customPanel.getVisibility() != View.GONE;
@@ -561,6 +571,12 @@ class AlertController {
                 listView.setItemChecked(checkedItem, true);
                 listView.setSelection(checkedItem);
             }
+        }
+    }
+
+    private void setupCountDownMillis() {
+        if (mCountDownTimer != null) {
+            mCountDownTimer.start();
         }
     }
 
@@ -634,7 +650,8 @@ class AlertController {
                             mIconView.getPaddingTop(),
                             mIconView.getPaddingRight(),
                             mIconView.getPaddingBottom());
-                    mIconView.setVisibility(View.GONE);
+                    // 占位，保证title居中
+                    mIconView.setVisibility(View.INVISIBLE);
                 }
             } else {
                 // Hide the title template
@@ -734,6 +751,21 @@ class AlertController {
             }
             mButtonNeutral.setVisibility(View.VISIBLE);
             whichButtons = whichButtons | BIT_BUTTON_NEUTRAL;
+        }
+
+        // 根据按钮的数量调整位置
+        if (whichButtons != 0) {
+            if (whichButtons == BIT_BUTTON_POSITIVE || whichButtons == BIT_BUTTON_NEGATIVE || whichButtons == BIT_BUTTON_NEUTRAL) {
+                Log.d(TAG, "setupButtons: only one button");
+            } else {
+                if ((whichButtons & BIT_BUTTON_NEUTRAL) != BIT_BUTTON_NEUTRAL) {
+                    // 没有中立按钮
+                    ViewGroup.MarginLayoutParams negativeButtonParams = (ViewGroup.MarginLayoutParams) mButtonNegative.getLayoutParams();
+                    TypedValue typedValue = new TypedValue();
+                    mContext.getTheme().resolveAttribute(R.attr.dialogPreferredPadding, typedValue, true);
+                    negativeButtonParams.setMarginStart(mContext.getResources().getDimensionPixelOffset(typedValue.resourceId));
+                }
+            }
         }
 
         if (shouldCenterSingleButton(mContext)) {
@@ -840,6 +872,8 @@ class AlertController {
         public AdapterView.OnItemSelectedListener mOnItemSelectedListener;
         public OnPrepareListViewListener mOnPrepareListViewListener;
         public boolean mRecycleOnMeasure = true;
+        public long mCountDownMillis;
+        public boolean mIsEndingByZero = false;
 
         /**
          * Interface definition for a callback to be invoked before the ListView
@@ -880,6 +914,10 @@ class AlertController {
                 if (mIconButtonListener != null) {
                     dialog.setOnCloseIconClickListener(mIconButtonListener);
                 }
+            }
+            // 设置倒计时
+            if (mCountDownMillis > 0) {
+                dialog.setCountDownMillis(mCountDownMillis, mIsEndingByZero);
             }
             if (mMessage != null) {
                 dialog.setMessage(mMessage);
@@ -1038,6 +1076,55 @@ class AlertController {
                 }
             }
             return adapter;
+        }
+    }
+
+    /**
+     * 设置倒计时
+     * @param countDownMillis 倒计时时间
+     * @param isEndingByZero 是否是0s结束
+     */
+    private void setCountDownMillis(long countDownMillis, boolean isEndingByZero) {
+        Log.i(TAG, "setCountDownMillis: count: " + countDownMillis + ", zero: "  + isEndingByZero);
+        if (this.mCountDownTimer != null) {
+            this.mCountDownTimer.cancel();
+        }
+        this.mCountDownTimer = new CountDownTimer(countDownMillis, COUNT_DOWN_DURATION) {
+
+            @Override
+            public void onFinish() {
+                if (mButtonPositive != null) {
+                    ViewExtensionKt.enable(mButtonPositive, true);
+                    mButtonPositive.setText(mButtonPositiveText);
+                }
+            }
+
+            @Override
+            public void onTick(long tick) {
+                // timer默认是从n-1开始倒计时到0，如果用户不是0结尾，文案加1
+                if (mButtonPositive != null) {
+                    mButtonPositive.setText(mButtonPositiveText + contractCountDownSeconds((int) (tick / COUNT_DOWN_DURATION + (isZeroFinal ? 0 : 1))));
+                    ViewExtensionKt.enable(mButtonPositive, false);
+                }
+            }
+        };
+    }
+
+    /**
+     * 组装倒计时
+     * @param i 秒数
+     * @return （is）
+     */
+    private String contractCountDownSeconds(int i) {
+        return mContext.getString(com.nathan.widget.R.string.count_down_seconds, i);
+    }
+
+    /**
+     * 移除倒计时任务
+     */
+    public void stopCountDownMillis() {
+        if (mCountDownTimer != null) {
+            mCountDownTimer.cancel();
         }
     }
 

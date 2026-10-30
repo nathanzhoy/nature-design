@@ -7,6 +7,7 @@
     <string name="scrollable_dialog">Scrollable Dialog</string>
     <string name="title">Title</string>
     <string name="confirm">Confirm</string>
+    <string name="neutral">Neutral</string>
     <string name="cancel">Cancel</string>
     <string name="test_text_long">The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.</string>
     <string name="test_text_super_long">The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.</string>
@@ -25,6 +26,8 @@
     <string name="button_toggle_group_func_summary">Single, multi, text, icon-only button toggle group</string>
     <string name="single_list_dialog">Single Dialog</string>
     <string name="multi_list_dialog">Multi Dialog</string>
+    <string name="single_button_dialog">Single Button Dialog</string>
+    <string name="danger_dialog">Danger Dialog</string>
     <string name="seek_bar">SeekBar</string>
     <string name="seek_bar_func_summary">SeekBar, ProgressBar</string>
     <string name="night_mode_theme">Night Theme</string>

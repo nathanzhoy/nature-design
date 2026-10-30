@@ -42,10 +42,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/multi_list_dialog"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/single_button_dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/single_list_dialog" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/single_button_dialog"
+        style="@style/Widget.Nature.Button.Fix.Yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/single_button_dialog"
+        app:layout_constraintBottom_toTopOf="@id/danger_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multi_list_dialog" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/danger_dialog"
+        style="@style/Widget.Nature.Button.Fix.Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/danger_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/single_button_dialog" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

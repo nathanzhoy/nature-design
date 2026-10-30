@@ -21,9 +21,11 @@
     android:background="@drawable/na_bg_dialog"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="?marginSpecific">
+    android:padding="?dialogPreferredPadding">
 
-    <include layout="@layout/na_alert_dialog_title" />
+    <include layout="@layout/na_alert_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <com.nathan.widget.ui.view.NatureSmoothCornerLayout
         android:id="@+id/contentPanel"

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme.Nature" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="Theme.Nature" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary -->
         <item name="colorPrimary">@color/na_primary</item>
         <item name="colorPrimaryContainer">@color/na_primary_container</item>
@@ -153,10 +153,10 @@
     </style>
 
     <!-- 日间模式 -->
-    <style name="Theme.Nature.Light" parent="Base.Theme.Nature" />
+    <style name="Theme.Nature.Light" />
 
     <!-- 夜间模式 -->
-    <style name="Theme.Nature.Dark" parent="Base.Theme.Nature">
+    <style name="Theme.Nature.Dark">
         <!-- Primary -->
         <item name="colorPrimary">@color/na_primary_dark</item>
         <item name="colorPrimaryContainer">@color/na_primary_container_dark</item>

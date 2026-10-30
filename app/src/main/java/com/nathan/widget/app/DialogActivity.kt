@@ -28,6 +28,9 @@ class DialogActivity : BaseActivity() {
                 }.setNegativeButton(R.string.cancel) { dialog, which ->
 
                 }
+                .setNeutralButton(R.string.neutral) { dialog, which ->
+
+                }
                 .create()
                 .show()
         }
@@ -83,6 +86,33 @@ class DialogActivity : BaseActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }.setNegativeButton(R.string.cancel) { dialog, which ->
+
+                }
+                .create()
+                .show()
+        }
+
+        binding.singleButtonDialog.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle(R.string.title)
+                .setMessage(R.string.test_text_long)
+                .setCountDown(1000 * 10, true)
+                .setPositiveButton(R.string.confirm) { dialog, which ->
+
+                }
+                .create()
+                .show()
+        }
+
+        binding.dangerDialog.setOnClickListener {
+            AlertDialog.Builder(this, com.nathan.widget.R.style.Theme_Nature_Dialog_Danger)
+                .setTitle(R.string.title)
+                .setMessage(R.string.test_text_long)
+                .setCountDown(1000L * 5, false)
+                .setPositiveButton(R.string.confirm) { dialog, which ->
+
+                }
+                .setNegativeButton(R.string.cancel) { dialog, which ->
 
                 }
                 .create()

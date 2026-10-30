@@ -361,6 +361,18 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
         }
 
         /**
+         * 设置倒计时
+         * @param countDownMillis 倒计时：毫秒
+         * @param isEndingByZero 是否是0s结束
+         * @return
+         */
+        public AlertDialog.Builder setCountDown(long countDownMillis, boolean isEndingByZero) {
+            P.mCountDownMillis = countDownMillis;
+            P.mIsEndingByZero = isEndingByZero;
+            return this;
+        }
+
+        /**
          * Set the title using the given resource id.
          *
          * @return This Builder object to allow for chaining of calls to set methods
@@ -1001,7 +1013,12 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
                 dialog.setCanceledOnTouchOutside(true);
             }
             dialog.setOnCancelListener(P.mOnCancelListener);
-            dialog.setOnDismissListener(P.mOnDismissListener);
+            dialog.setOnDismissListener(dialogInterface -> {
+                dialog.mAlert.stopCountDownMillis();
+                if (P.mOnDismissListener != null) {
+                    P.mOnDismissListener.onDismiss(dialogInterface);
+                }
+            });
             if (P.mOnKeyListener != null) {
                 dialog.setOnKeyListener(P.mOnKeyListener);
             }
