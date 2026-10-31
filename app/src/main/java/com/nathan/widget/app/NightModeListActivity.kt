@@ -4,7 +4,9 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsetsController
 import android.widget.Toast
+import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityListNightModeBinding
@@ -24,7 +26,18 @@ class NightModeListActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupLightStatusBarFalse()
         setupRecyclerView()
+    }
+
+    /**
+     * 设置状态栏颜色为白色
+     * isAppearanceLightStatusBars = false，非亮色[亮色：黑图标，非亮色：白图标]
+     * 底色为业务edgeMode延伸的颜色，nightMode是黑色底
+     */
+    private fun setupLightStatusBarFalse() {
+        val controller = WindowCompat.getInsetsController(window, window.decorView)
+        controller.isAppearanceLightStatusBars = false
     }
 
     private fun setupRecyclerView() {

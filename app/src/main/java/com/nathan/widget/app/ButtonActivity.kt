@@ -32,7 +32,8 @@ class ButtonActivity : BaseActivity() {
             val button = it as NatureButton
             val checked = button.isChecked
             button.isChecked = !checked
-            NatureToast.makeText(this, "普通按钮选中：${button.isChecked}", Toast.LENGTH_SHORT).show()
+            NatureToast.makeText(this, "普通按钮选中：${button.isChecked}", Toast.LENGTH_SHORT)
+                .show()
             true
         }
         binding.btnBlue.setOnClickListener {

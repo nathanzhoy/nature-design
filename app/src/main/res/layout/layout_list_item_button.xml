@@ -2,7 +2,7 @@
 <com.nathan.widget.ui.view.NatureButton xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/button"
     android:text="@string/button"
-    style="@style/Widget.Nature.Button.Small"
+    style="@style/Widget.Nature.Button.Small.Fix.Blue"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 

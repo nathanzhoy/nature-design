@@ -4,10 +4,8 @@ import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
-import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -15,8 +13,8 @@ import androidx.viewbinding.ViewBinding
 import com.nathan.widget.app.databinding.ActivityMainBinding
 import com.nathan.widget.app.databinding.ItemFuncBinding
 import com.nathan.widget.app.util.startActivity
+import com.nathan.widget.ui.recyclerview.NatureItemDecoration
 import com.nathan.widget.ui.view.NatureToast
-import com.nathan.widget.util.ScreenUtils
 
 class MainActivity : BaseActivity() {
 
@@ -37,6 +35,7 @@ class MainActivity : BaseActivity() {
     private fun setupFuncMap() {
         funcMap = mapOf(
             getString(R.string.button) to getString(R.string.button_func_summary),
+            getString(R.string.forwarding_button) to getString(R.string.forwarding_button_func_summary),
             getString(R.string.dialog) to getString(R.string.dialog_func_summary),
             getString(R.string.smooth_layout) to getString(R.string.smooth_corner_func_summary),
             getString(R.string.list) to getString(R.string.list_func_summary),
@@ -54,21 +53,7 @@ class MainActivity : BaseActivity() {
         }
         val data = packageManager.queryIntentActivities(intent, PackageManager.GET_META_DATA)
         if (data.isNotEmpty()) {
-            binding.funcList.addItemDecoration(object : RecyclerView.ItemDecoration() {
-
-                private val space = ScreenUtils.dp2Px(this@MainActivity, 5F).toInt()
-
-                override fun getItemOffsets(
-                    outRect: Rect,
-                    view: View,
-                    parent: RecyclerView,
-                    state: RecyclerView.State
-                ) {
-                    // 上下间隔5dp，即顶部和底部各添加5dp
-                    outRect.top = space
-                    outRect.bottom = space
-                }
-            })
+            binding.funcList.addItemDecoration(NatureItemDecoration(this))
             binding.funcList.adapter = FuncAdapter(generateFuncList(data))
         }
     }

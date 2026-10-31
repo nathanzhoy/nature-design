@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Nature Widgets</string>
     <string name="button">Button</string>
+    <string name="forwarding_button">Forwarding Button</string>
     <string name="smooth_layout">SmoothLayout</string>
     <string name="dialog">Dialog</string>
     <string name="common_dialog">Common Dialog</string>
@@ -12,6 +13,7 @@
     <string name="test_text_long">The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.</string>
     <string name="test_text_super_long">The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.The tides carry the forgotten names in silence; they drowned in the bubbles of their own delusions.</string>
     <string name="button_func_summary">Small button, Big button</string>
+    <string name="forwarding_button_func_summary">Forwarding button, with an arrow icon or not</string>
     <string name="dialog_func_summary">Small dialog, Big dialog</string>
     <string name="smooth_corner_func_summary">Many kinds of smooth corner layout styles</string>
     <string name="list">List</string>

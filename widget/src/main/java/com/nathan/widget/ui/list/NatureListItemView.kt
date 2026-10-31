@@ -47,7 +47,8 @@ class NatureListItemView @JvmOverloads constructor(
     private var summary = ""
     private var extraSummary = ""
     private var customLayoutRes = 0
-    private var isChecked = false
+    private var checked = false
+    private var checkable = true
 
     init {
         PressAnimUtils(this)
@@ -68,8 +69,22 @@ class NatureListItemView @JvmOverloads constructor(
             setTitle(title)
             summary = getString(R.styleable.NatureListItemView_android_summary) ?: ""
             setSummary(summary)
+            checkable = getBoolean(R.styleable.NatureListItemView_android_checkable, true)
+            checked = getBoolean(R.styleable.NatureListItemView_android_checked, false)
+            if (checkable) {
+                isChecked = checked
+            }
         }
     }
+
+    fun setCheckable(checkable: Boolean) {
+        this.checkable = checkable
+        if (checkable.not()) {
+            isChecked = false
+        }
+    }
+
+    fun isCheckable() = checkable
 
     fun setOnCustomLayoutClick(listener: OnClickListener) {
         customLayout.setOnClickListener(listener)
@@ -199,19 +214,19 @@ class NatureListItemView @JvmOverloads constructor(
     fun getCustomLayout() = customLayout
 
     override fun isChecked(): Boolean {
-        return isChecked
+        return checked
     }
 
     override fun setChecked(checked: Boolean) {
-        if (isChecked != checked) {
-            isChecked = checked
+        if (this.checked != checked) {
+            this.checked = checked
             refreshDrawableState()
             onCheckedChangeListener?.onCheckedChanged(checked)
         }
     }
 
     override fun toggle() {
-        isChecked = isChecked.not()
+        checked = checked.not()
     }
 
     fun setOnCheckedChangeListener(listener: OnCheckedChangeListener) {
@@ -220,7 +235,7 @@ class NatureListItemView @JvmOverloads constructor(
 
     override fun onCreateDrawableState(extraSpace: Int): IntArray? {
         val drawableState = super.onCreateDrawableState(extraSpace + 1)
-        if (isChecked) {
+        if (checked) {
             mergeDrawableStates(drawableState, CHECKED_STATE_SET)
         }
         return drawableState

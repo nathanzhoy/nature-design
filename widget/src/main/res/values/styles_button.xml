@@ -61,6 +61,12 @@
         <item name="android:minHeight">20dp</item>
     </style>
 
+    <!-- 小按钮 -->
+    <style name="Widget.Nature.Button.Small.Fix.Blue" parent="Widget.Nature.Button.Small">
+        <item name="android:background">@drawable/na_bg_btn_small_fix_blue</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
     <style name="Widget.Nature.Button.Group">
         <item name="android:background">@drawable/na_bg_btn_group</item>
         <item name="iconSize">20dp</item>

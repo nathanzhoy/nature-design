@@ -92,4 +92,13 @@
         <item name="android:background">@drawable/na_bg_seek_bar</item>
         <item name="android:progressDrawable">@drawable/na_bg_seek_bar_progress</item>
     </style>
+
+    <!-- 前进按钮 -->
+    <style name="Widget.Nature.Button.Forwarding">
+        <item name="android:background">@drawable/na_bg_btn_forwarding</item>
+        <item name="isForwarding">true</item>
+        <item name="android:checkable">true</item>
+        <item name="android:checked">false</item>
+        <item name="android:minWidth">140dp</item>
+    </style>
 </resources>

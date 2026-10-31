@@ -1,8 +1,6 @@
 package com.nathan.widget.app
 
-import android.graphics.Rect
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -14,9 +12,9 @@ import com.nathan.widget.app.databinding.ItemListForwardingBinding
 import com.nathan.widget.app.databinding.ItemListNumberBinding
 import com.nathan.widget.app.databinding.ItemListSwitchBinding
 import com.nathan.widget.ui.list.NatureListItemView
+import com.nathan.widget.ui.recyclerview.NatureItemDecoration
 import com.nathan.widget.ui.view.NatureButton
 import com.nathan.widget.ui.view.NatureToast
-import com.nathan.widget.util.ScreenUtils
 
 class ListActivity : BaseActivity() {
 
@@ -29,21 +27,7 @@ class ListActivity : BaseActivity() {
 
     private fun setupRecyclerView() {
         val models = getListModel()
-        binding.recyclerView.addItemDecoration(object : RecyclerView.ItemDecoration() {
-
-            private val space = ScreenUtils.dp2Px(this@ListActivity, 5F).toInt()
-
-            override fun getItemOffsets(
-                outRect: Rect,
-                view: View,
-                parent: RecyclerView,
-                state: RecyclerView.State
-            ) {
-                // 上下间隔5dp，即顶部和底部各添加5dp
-                outRect.top = space
-                outRect.bottom = space
-            }
-        })
+        binding.recyclerView.addItemDecoration(NatureItemDecoration(this))
         binding.recyclerView.adapter = object : RecyclerView.Adapter<ListItemViewHolder>() {
 
             override fun onCreateViewHolder(

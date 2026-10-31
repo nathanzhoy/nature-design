@@ -31,6 +31,8 @@
     <declare-styleable name="NatureListItemView">
         <attr name="android:title" />
         <attr name="android:summary" />
+        <attr name="android:checkable" />
+        <attr name="android:checked" />
         <attr name="mode" format="enum">
             <enum name="custom" value="0" />
             <enum name="toggle" value="1" />
@@ -67,4 +69,13 @@
     <!-- Switch -->
     <!--<attr name="natureSwitchStyle" format="reference" />
     <declare-styleable name=""-->
+
+    <attr name="natureForwardingButtonStyle" format="reference" />
+    <declare-styleable name="NatureForwardingButton">
+        <attr name="isForwarding" format="boolean" />
+        <attr name="android:icon" />
+        <attr name="android:text" />
+        <attr name="android:checkable" />
+        <attr name="android:checked" />
+    </declare-styleable>
 </resources>

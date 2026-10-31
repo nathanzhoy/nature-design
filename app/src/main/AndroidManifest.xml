@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nathan.Demo">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,6 +30,17 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.nathan.widget.app.ForwardingButtonActivity"
+            android:exported="false"
+            android:label="@string/forwarding_button">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name="com.nathan.widget.app.ButtonGroupActivity"
             android:exported="false"
@@ -39,6 +50,7 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.SmoothLayoutActivity"
             android:exported="false"
@@ -47,8 +59,8 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
-
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.DialogActivity"
             android:exported="false"
@@ -58,6 +70,7 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.ListActivity"
             android:exported="false"
@@ -67,6 +80,7 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.EditTextActivity"
             android:exported="false"
@@ -76,6 +90,7 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.ToastActivity"
             android:exported="false"
@@ -85,6 +100,7 @@
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nathan.widget.app.SeekBarActivity"
             android:exported="false"

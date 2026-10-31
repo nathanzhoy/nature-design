@@ -1103,7 +1103,7 @@ class AlertController {
             public void onTick(long tick) {
                 // timer默认是从n-1开始倒计时到0，如果用户不是0结尾，文案加1
                 if (mButtonPositive != null) {
-                    mButtonPositive.setText(mButtonPositiveText + contractCountDownSeconds((int) (tick / COUNT_DOWN_DURATION + (isZeroFinal ? 0 : 1))));
+                    mButtonPositive.setText(mButtonPositiveText + contractCountDownSeconds((int) (tick / COUNT_DOWN_DURATION + (isEndingByZero ? 0 : 1))));
                     ViewExtensionKt.enable(mButtonPositive, false);
                 }
             }
