@@ -141,6 +141,7 @@
         <item name="natureEditTextStyle">@style/Widget.Nature.EditText</item>
         <item name="natureButtonToggleGroupStyle">@style/Widget.Nature.ButtonToggleGroup</item>
         <item name="natureForwardingButtonStyle">@style/Widget.Nature.Button.Forwarding</item>
+        <item name="natureLoadingViewStyle">@style/Widget.Nature.LoadingView</item>
 
         <!-- Android -->
         <item name="actionBarSize">64dp</item>

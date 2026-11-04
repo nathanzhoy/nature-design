@@ -3,8 +3,8 @@
     <!-- 普通按钮, 只支持简单的文本显示 -->
     <style name="Widget.Nature.Button" parent="Widget.MaterialComponents.Button">
         <item name="elevation">0dp</item>
-        <item name="android:paddingVertical">8dp</item>
-        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">@dimen/na_common_dp_8</item>
+        <item name="android:paddingHorizontal">@dimen/na_common_dp_10</item>
         <item name="backgroundTint">@null</item>
         <item name="shapeAppearance">@null</item>
         <item name="android:textAppearance">?textAppearanceBodyLarge</item>
@@ -15,8 +15,8 @@
         <item name="android:textColor">@color/na_btn_text_color</item>
         <item name="android:background">@drawable/na_bg_btn</item>
         <item name="rippleColor">@null</item>
-        <item name="android:minWidth">80dp</item>
-        <item name="android:minHeight">30dp</item>
+        <item name="android:minWidth">@dimen/na_common_dp_90</item>
+        <item name="android:minHeight">@dimen/na_common_dp_30</item>
         <item name="android:checkable">true</item>
         <item name="toggleCheckedStateOnClick">false</item>
     </style>
@@ -53,12 +53,12 @@
 
     <!-- 小按钮 -->
     <style name="Widget.Nature.Button.Small">
-        <item name="android:paddingVertical">4dp</item>
-        <item name="android:paddingHorizontal">6dp</item>
+        <item name="android:paddingVertical">@dimen/na_common_dp_4</item>
+        <item name="android:paddingHorizontal">@dimen/na_common_dp_6</item>
         <item name="android:background">@drawable/na_bg_btn_small</item>
         <item name="android:textAppearance">?textAppearanceLabelLarge</item>
-        <item name="android:minWidth">54dp</item>
-        <item name="android:minHeight">20dp</item>
+        <item name="android:minWidth">@dimen/na_common_dp_60</item>
+        <item name="android:minHeight">@dimen/na_common_dp_20</item>
     </style>
 
     <!-- 小按钮 -->
@@ -69,7 +69,7 @@
 
     <style name="Widget.Nature.Button.Group">
         <item name="android:background">@drawable/na_bg_btn_group</item>
-        <item name="iconSize">20dp</item>
+        <item name="iconSize">@dimen/na_common_dp_20</item>
         <item name="iconTint">@color/na_btn_text_color</item>
     </style>
 </resources>

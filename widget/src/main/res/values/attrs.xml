@@ -78,4 +78,11 @@
         <attr name="android:checkable" />
         <attr name="android:checked" />
     </declare-styleable>
+
+    <attr name="natureLoadingViewStyle" format="reference" />
+    <declare-styleable name="NatureLoadingView">
+        <attr name="android:startColor" />
+        <attr name="android:endColor" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
 </resources>

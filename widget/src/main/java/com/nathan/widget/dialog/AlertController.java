@@ -763,7 +763,7 @@ class AlertController {
                     ViewGroup.MarginLayoutParams negativeButtonParams = (ViewGroup.MarginLayoutParams) mButtonNegative.getLayoutParams();
                     TypedValue typedValue = new TypedValue();
                     mContext.getTheme().resolveAttribute(R.attr.dialogPreferredPadding, typedValue, true);
-                    negativeButtonParams.setMarginStart(mContext.getResources().getDimensionPixelOffset(typedValue.resourceId));
+                    negativeButtonParams.setMarginStart(mContext.getResources().getDimensionPixelSize(typedValue.resourceId));
                 }
             }
         }
@@ -808,9 +808,9 @@ class AlertController {
 
             final TypedArray ta = context.obtainStyledAttributes(
                     attrs, R.styleable.RecycleListView);
-            mPaddingBottomNoButtons = ta.getDimensionPixelOffset(
+            mPaddingBottomNoButtons = ta.getDimensionPixelSize(
                     R.styleable.RecycleListView_paddingBottomNoButtons, -1);
-            mPaddingTopNoTitle = ta.getDimensionPixelOffset(
+            mPaddingTopNoTitle = ta.getDimensionPixelSize(
                     R.styleable.RecycleListView_paddingTopNoTitle, -1);
         }
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nathan.widget.ui.view.NatureLoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="@dimen/na_common_dp_30"
+        android:layout_height="@dimen/na_common_dp_30"
+        app:layout_constraintBottom_toTopOf="@id/loading_view_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.nathan.widget.ui.view.NatureLoadingView
+        android:id="@+id/loading_view_white"
+        android:layout_width="@dimen/na_common_dp_30"
+        android:layout_height="@dimen/na_common_dp_30"
+        style="@style/Widget.Nature.LoadingView.White"
+        app:layout_constraintBottom_toTopOf="@id/btn_stop_resume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/na_common_dp_10"
+        android:text="@string/loading"
+        android:textAppearance="?textAppearanceBodyMedium"
+        android:textColor="?colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loading_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/na_common_dp_10"
+        android:text="@string/loading"
+        android:textAppearance="?textAppearanceBodyMedium"
+        android:textColor="?colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loading_view_white" />
+
+    <com.nathan.widget.ui.view.NatureButton
+        android:id="@+id/btn_stop_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loading_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

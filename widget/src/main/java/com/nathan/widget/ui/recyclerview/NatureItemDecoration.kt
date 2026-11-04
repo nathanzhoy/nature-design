@@ -8,7 +8,7 @@ import com.nathan.widget.R
 
 class NatureItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
-    private val space = context.resources.getDimensionPixelOffset(R.dimen.na_common_dp_5)
+    private val space = context.resources.getDimensionPixelSize(R.dimen.na_common_dp_5)
 
     override fun getItemOffsets(
         outRect: Rect,

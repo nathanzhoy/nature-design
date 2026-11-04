@@ -101,4 +101,16 @@
         <item name="android:checked">false</item>
         <item name="android:minWidth">140dp</item>
     </style>
+
+    <style name="Widget.Nature.LoadingView">
+        <item name="android:startColor">?colorPrimary</item>
+        <item name="android:endColor">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/na_common_dp_30</item>
+        <item name="android:minHeight">@dimen/na_common_dp_30</item>
+        <item name="strokeWidth">@dimen/na_common_dp_4</item>
+    </style>
+
+    <style name="Widget.Nature.LoadingView.White">
+        <item name="android:startColor">?colorSurfaceContainerLow</item>
+    </style>
 </resources>

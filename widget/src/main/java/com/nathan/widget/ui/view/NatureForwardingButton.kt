@@ -108,7 +108,7 @@ class NatureForwardingButton @JvmOverloads constructor(
                 (text.layoutParams as MarginLayoutParams).apply {
                     val typedValue = TypedValue()
                     context.theme.resolveAttribute(R.attr.marginSmall, typedValue, true)
-                    marginStart = resources.getDimensionPixelOffset(typedValue.resourceId)
+                    marginStart = resources.getDimensionPixelSize(typedValue.resourceId)
                 }
             }
         }
