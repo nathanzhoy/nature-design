@@ -38,4 +38,6 @@
     <string name="loading_func_summary">A state view, loading, failure, etc.</string>
     <string name="stop">Stop</string>
     <string name="start">Start</string>
+    <string name="label">Label</string>
+    <string name="label_func_summary">Colorful label view</string>
 </resources>

@@ -44,7 +44,8 @@ class MainActivity : BaseActivity() {
             getString(R.string.button_group) to getString(R.string.button_toggle_group_func_summary),
             getString(R.string.seek_bar) to getString(R.string.seek_bar_func_summary),
             getString(R.string.night_mode_theme) to getString(R.string.night_mode_theme_func_summary),
-            getString(R.string.loading) to getString(R.string.loading_func_summary)
+            getString(R.string.loading) to getString(R.string.loading_func_summary),
+            getString(R.string.label) to getString(R.string.label_func_summary)
         )
     }
 

@@ -87,6 +87,7 @@
         <item name="colorPrimaryOrange">@color/na_primary_orange</item>
         <item name="colorOnPrimaryOrange">@color/na_on_primary_orange</item>
         <item name="colorPrimaryContainerOrange">@color/na_primary_container_orange</item>
+        <item name="colorOnPrimaryContainerOrange">@color/na_on_primary_container_orange</item>
 
         <!-- Corner -->
         <item name="cornerMini">@dimen/na_corner_mini</item>

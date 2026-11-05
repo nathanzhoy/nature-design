@@ -38,4 +38,6 @@
     <string name="loading_func_summary">加载控件，边界状态等</string>
     <string name="stop">停止</string>
     <string name="start">开始</string>
+    <string name="label">标签</string>
+    <string name="label_func_summary">多彩的标签控件</string>
 </resources>

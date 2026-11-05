@@ -122,9 +122,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.nathan.widget.app.LoadingActivity"
+        <activity
+            android:name="com.nathan.widget.app.LoadingActivity"
             android:exported="false"
             android:label="@string/loading">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.nathan.widget.app.LabelActivity"
+            android:exported="false"
+            android:label="@string/label">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.nathan.widget.app.category.UI_PAGE_SCOPE" />

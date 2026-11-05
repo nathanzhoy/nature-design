@@ -113,4 +113,33 @@
     <style name="Widget.Nature.LoadingView.White">
         <item name="android:startColor">?colorSurfaceContainerLow</item>
     </style>
+
+    <style name="Widget.Nature.Label" parent="Widget.Nature.Button.Small">
+        <item name="android:checkable">false</item>
+    </style>
+
+    <style name="Widget.Nature.Label.Fix">
+        <item name="android:background">@drawable/na_bg_label_fix_blue</item>
+        <item name="android:textColor">?colorOnPrimaryContainer</item>
+    </style>
+
+    <style name="Widget.Nature.Label.Fix.Red">
+        <item name="android:background">@drawable/na_bg_label_fix_red</item>
+        <item name="android:textColor">?colorOnPrimaryContainerRed</item>
+    </style>
+
+    <style name="Widget.Nature.Label.Fix.Orange">
+        <item name="android:background">@drawable/na_bg_label_fix_orange</item>
+        <item name="android:textColor">?colorOnPrimaryContainerOrange</item>
+    </style>
+
+    <style name="Widget.Nature.Label.Fix.Green">
+        <item name="android:background">@drawable/na_bg_label_fix_green</item>
+        <item name="android:textColor">?colorOnPrimaryContainerGreen</item>
+    </style>
+
+    <style name="Widget.Nature.Label.Fix.Yellow">
+        <item name="android:background">@drawable/na_bg_label_fix_yellow</item>
+        <item name="android:textColor">?colorOnPrimaryContainerYellow</item>
+    </style>
 </resources>

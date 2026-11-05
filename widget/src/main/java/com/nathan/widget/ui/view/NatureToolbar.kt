@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import com.nathan.widget.R
-import com.nathan.widget.util.NatureToolbarTitleAnimUtils
+import com.nathan.widget.util.ToolbarTitleAnimUtils
 import com.nathan.widget.util.PressAnimUtils
 
 class NatureToolbar @JvmOverloads constructor(
@@ -25,7 +25,7 @@ class NatureToolbar @JvmOverloads constructor(
         PressAnimUtils(child)
         if (child is AppCompatTextView) {
             titleView = child
-            NatureToolbarTitleAnimUtils.initAnim(child)
+            ToolbarTitleAnimUtils.initAnim(listOf(child))
         }
         if (child is AppCompatImageButton) {
             child.apply {
@@ -39,20 +39,31 @@ class NatureToolbar @JvmOverloads constructor(
                 }
             }
             navigationButton = child
+            ToolbarTitleAnimUtils.initAnim(listOf(child))
         }
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        val views = mutableListOf<View>()
         titleView?.also {
-            NatureToolbarTitleAnimUtils.onAttached(it)
+            views.add(it)
         }
+        navigationButton?.also {
+            views.add(it)
+        }
+        ToolbarTitleAnimUtils.onAttached(views)
     }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
+        val views = mutableListOf<View>()
         titleView?.also {
-            NatureToolbarTitleAnimUtils.onDetached(it)
+            views.add(it)
         }
+        navigationButton?.also {
+            views.add(it)
+        }
+        ToolbarTitleAnimUtils.onDetached(views)
     }
 }
